@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "网易云",
+  "usingComponents": {
+    "wy-tab": "/components/wy/bar",
+    "in-duction": "/components/wy/introduction",
+    "cu-rr": "/components/wy/curr",
+    "pe-po": "/components/wy/pepole",
+    "ta-bar": "/components/wy/tabar",
+    "pur-ple": "/components/wy/purple",
+    "te-am": "/components/wy/team"
+  }
+}
