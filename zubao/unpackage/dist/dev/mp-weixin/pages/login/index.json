@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "lo-gin": "/pages/login/components/login",
+    "top-tar": "/pages/login/components/toptar"
+  }
+}

@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['login']]]]}}" class="login data-v-495f60c1" bindtap="__e">登录</view>

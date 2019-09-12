@@ -1,0 +1,1 @@
+<view><top-tar vue-id="1" backtext="绑定手机" bind:__l="__l"></top-tar><lo-gin vue-id="2" content="{{con}}" bind:__l="__l"></lo-gin></view>
