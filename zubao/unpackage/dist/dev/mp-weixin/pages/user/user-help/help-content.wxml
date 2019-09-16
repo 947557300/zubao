@@ -1,0 +1,1 @@
+<view><top-tar vue-id="1" backtext="{{'常见问题-'+list.title}}" bind:__l="__l"></top-tar><view>{{list.content}}</view></view>

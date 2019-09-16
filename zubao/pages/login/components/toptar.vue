@@ -1,10 +1,10 @@
 <template>
 	<view>
-			<view class="nav_top" :class={bgColor:hasBgc} :style="{height:headHeight+'px'}">
+			<view class="nav_top"  :style="{height:headHeight+'px'}">
 				<view class="statusBar" :style="{height:statusBarHeight+'px'}"></view>
 				<view class="topContent">
-					<view v-if="isBack" class="goBack" @click="goBack()">
-						<image  src="../../../static/login/back.png" mode="" ></image>
+					<view v-if="isBack" class="goBack" >
+						<image  src="../../../static/login/back.png" mode="" @click="goBack()"></image>
 						<text class="backtext">{{backtext}}</text>
 					</view>
 					<view class="title">{{title}}</view>

@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/login/index",
-    "pages/login/phone-check"
+    "pages/user/user-help/user-help",
+    "pages/login/login",
+    "pages/login/phone-check",
+    "pages/user/user-help/help-content"
   ],
   "subPackages": [],
   "window": {

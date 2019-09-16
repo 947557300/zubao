@@ -1,0 +1,1 @@
+<view><top-tar vue-id="1" backtext="常见问题" bind:__l="__l"></top-tar><user-help vue-id="2" helplist="{{list}}" bind:__l="__l"></user-help></view>
