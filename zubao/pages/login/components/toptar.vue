@@ -76,7 +76,7 @@
 	    		position: fixed;
 	    		top: 0;
 	    		left: 0;
-	    		z-index: 900;
+	    		/*z-index: 900;*/
 	    		display: flex;
 	    		flex-direction: column;
 	    		background-color: transparent;

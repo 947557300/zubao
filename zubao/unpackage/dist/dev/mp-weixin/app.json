@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/user/user-authentication/user-authentication",
     "pages/login/index",
     "pages/user/user-help/user-help",
     "pages/login/login",
@@ -13,5 +14,6 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap14.json"
 }
