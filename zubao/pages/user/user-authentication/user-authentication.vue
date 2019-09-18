@@ -47,7 +47,8 @@
 	import TopTar from "../../login/components/toptar.vue"
 	export default{
 		 components:{
-		 		 TopTar,  
+		 		TopTar,
+
 		 },
 		 data(){
 			 return{

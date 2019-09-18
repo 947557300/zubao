@@ -144,11 +144,7 @@ var _default =
 
     isNavBack: { //固定返回前面的页面
       type: Boolean,
-      default: true },
-
-    backUrl: { //返回到指定页面
-      type: String,
-      default: 'index' } },
+      default: true } },
 
 
 

@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"pages/login/components/toptar":1,"pages/login/components/login":1,"pages/user/user-help/components/help-list":1};
+/******/ 		var cssChunks = {"pages/login/components/toptar":1,"pages/user/user-help/components/help-list":1,"pages/login/components/login":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"pages/login/components/toptar":"pages/login/components/toptar","pages/login/components/login":"pages/login/components/login","pages/user/user-help/components/help-list":"pages/user/user-help/components/help-list"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"pages/login/components/toptar":"pages/login/components/toptar","pages/user/user-help/components/help-list":"pages/user/user-help/components/help-list","pages/login/components/login":"pages/login/components/login"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

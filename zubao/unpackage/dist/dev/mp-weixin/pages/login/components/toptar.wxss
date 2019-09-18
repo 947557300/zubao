@@ -27,22 +27,19 @@
 .nav_top.data-v-6f0a11fb {
   width: 100vw;
   position: fixed;
-  top: 0;
-  left: 0;
-  /*z-index: 900;*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  left: 0;
+  top: 0;
+  z-index: 998;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: transparent;
-}
-.nav_top.bgColor.data-v-6f0a11fb {
-    background-color: #fff;
+  background-color: #fff;
 }
 .nav_top .statusBar.data-v-6f0a11fb {
     background-color: #fff;
