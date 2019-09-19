@@ -25,6 +25,9 @@
 				  
 			  } 
 		   },
+		   onLoad(){
+			   console.log(this.list);
+		   },
 			methods:{
 				changelist(index){
 					var that=this;
@@ -50,6 +53,7 @@
 		  font-size:32upx;
           color:#3d3d3d;
 		  padding:28upx 0;
+		  background:red;
 		  image{
 			  width:70upx;
 			  height:55upx;

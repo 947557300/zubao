@@ -1,0 +1,1 @@
+<view><top-tar vue-id="1" backtext="个人中心" bind:__l="__l"></top-tar><set-con vue-id="2" msglist="{{msglist}}" bind:__l="__l"></set-con></view>

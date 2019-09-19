@@ -24,13 +24,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.helplist.data-v-5db1ebce {
+.content.data-v-1d5549b8 {
   width: 100%;
+  font-size: 30rpx;
 }
-.helplist .list.data-v-5db1ebce {
-    width: 96%;
-    margin-left: 4%;
-    border-top: 1rpx solid #f2f2f2;
+.content .msg-content .flex.data-v-1d5549b8 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -43,28 +41,40 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 32rpx;
-    color: #3d3d3d;
-    padding: 28rpx 0;
-    background: red;
+    border-bottom: 2rpx solid #f2f2f2;
+    padding: 34rpx 30rpx;
 }
-.helplist .list image.data-v-5db1ebce {
-      width: 70rpx;
-      height: 55rpx;
-      margin-right: 5rpx;
+.content .msg-content .bold.data-v-1d5549b8 {
+    font-weight: bold;
 }
-.helplist .boderb.data-v-5db1ebce {
-    border-top: 0;
-    border-bottom: 4rpx solid #f2f2f2;
+.content .msg-content .graytext.data-v-1d5549b8 {
+    color: #4a4a4a;
 }
-.helplist .showdiv.data-v-5db1ebce {
-    width: 100%;
-    margin-top: 50rpx;
+.content .msg-content .grayer.data-v-1d5549b8 {
+    color: #afafaf;
+}
+.content .msg-content .msg-img.data-v-1d5549b8 {
+    padding: 20rpx 30rpx !important;
+}
+.content .msg-content .msg-img image.data-v-1d5549b8 {
+      width: 140rpx;
+      height: 140rpx;
+      border-radius: 50%;
+}
+.content .msg-content .gorz.data-v-1d5549b8 {
     text-align: center;
+    color: #ea838f;
+    margin-top: 50rpx;
 }
-.helplist .showdiv .show.data-v-5db1ebce {
-      color: #ec848f;
-      font-size: 28rpx;
-      border-bottom: 4rpx solid #f2f2f2;
+.content .outlogin.data-v-1d5549b8 {
+    width: 86%;
+    position: fixed;
+    left: 7%;
+    bottom: 25rpx;
+    color: #fff;
+    background: #ea838f;
+    text-align: center;
+    height: 100rpx;
+    line-height: 100rpx;
 }
 

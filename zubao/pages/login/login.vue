@@ -18,7 +18,7 @@
 		methods: {
             login(){
 				uni.navigateTo({
-					url:"index"
+					url:"../user/user-help/user-help"
 				})
 			}
 		}
