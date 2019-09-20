@@ -148,6 +148,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   props: {
@@ -158,20 +197,115 @@ var _default =
 
   data: function data() {
     return {
+      list: this.msglist,
+      userimg: "../../../../static/login/part5_picture2.png",
+      showname: false,
+      showsex: false,
+      shownum: true,
+      checkname: "",
+      sexlist: [
+      {
+        value: "1",
+        name: "男" },
 
-      list: this.msglist };
+      {
+        value: "0",
+        name: "女" }] };
+
 
 
 
   },
   created: function created() {
-    console.log(this.list);
+    this.list.phone = this.hidden(this.list.phone, 3, 4);
+    this.list.sfz = this.hidden(this.list.sfz, 4, 4);
+    this.hiddenrz();
+    this.hiddensex();
   },
   methods: {
     gorz: function gorz() {
       uni.navigateTo({
         url: '../user-authentication/user-authentication' });
 
+    },
+    hidden: function hidden(str, frontLen, endLen) {
+      var start = '';
+      var str1 = str.toString();
+      for (var i = 0; i < frontLen; i++) {
+        start += str1[i];
+      }
+      var len = str1.length - frontLen - endLen;
+      var xing = '';
+      for (var i = 0; i < len; i++) {
+        xing += '*';
+      }
+      var ends = frontLen + len;
+      var end = '';
+      for (var i = ends; i < str1.length; i++) {
+        end += str1[i];
+      }
+      return start + xing + end;
+    },
+    hiddenrz: function hiddenrz() {
+      var rzzt = this.list.rzzt;
+      if (rzzt == true) {
+        rzzt = "实名认证";
+      } else {
+        rzzt = "未认证";
+      };
+      this.list.rzzt = rzzt;
+    },
+    hiddensex: function hiddensex() {
+      var sex = this.list.sex;
+      if (sex == 1) {
+        sex = "男";
+      } else {
+        sex = "女";
+      };
+      this.list.sex = sex;
+    },
+    changeimg: function changeimg() {
+      var that = this;
+      uni.chooseImage({
+        count: 1,
+        sizeType: "compressed",
+        success: function success(res) {
+          that.userimg = res.tempFilePaths;
+        } });
+
+    },
+    changnameshow: function changnameshow() {
+      this.showname = true;
+    },
+    changnameno: function changnameno() {
+      this.showname = false;
+    },
+    changnameyes: function changnameyes() {
+      this.showname = false;
+      this.list.wxname = this.checkname;
+    },
+    changnumshow: function changnumshow() {
+      this.shownum = true;
+    },
+    changnumno: function changnumno() {
+      this.shownum = false;
+    },
+    changnumyes: function changnumyes() {
+      this.shownum = false;
+      this.list.wxnum = "未定义";
+
+    },
+    changsexshow: function changsexshow() {
+      this.showsex = true;
+    },
+    changsexno: function changsexno() {
+      this.showsex = false;
+    },
+    changsexyes: function changsexyes() {
+      this.showsex = false;
+    },
+    radioChange: function radioChange(e) {
+      console.log(e.target.value);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

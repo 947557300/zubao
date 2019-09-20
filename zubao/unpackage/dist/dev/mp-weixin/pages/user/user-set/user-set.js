@@ -129,24 +129,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     return {
       msglist: {
         wxname: "我要上春晚",
-        sex: "男",
+        sex: 1,
         wxnum: "我要上春晚",
-        phone: "13111111111",
-        rzzt: false,
+        phone: 13111111111,
+        rzzt: true,
         name: "黄浩涛",
         sfz: 445111111111111111 } };
 
 
   },
-  methods: {
-    hidden: function hidden(str, frontLen, endLen) {//str：要进行隐藏的变量  frontLen: 前面需要保留几位    endLen: 后面需要保留几位
-      var len = str.length - frontLen - endLen;
-      var xing = '';
-      for (var i = 0; i < len; i++) {
-        xing += '*';
-      }
-      return str.substring(0, frontLen) + xing + str.substring(str.length - endLen);
-    } } };exports.default = _default;
+  methods: {} };exports.default = _default;
 
 /***/ })
 ],[[11,"common/runtime","common/vendor"]]]);
