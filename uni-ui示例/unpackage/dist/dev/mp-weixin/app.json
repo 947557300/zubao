@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/extUI/badge/badge",
+    "pages/extUI/count-down/count-down",
+    "pages/extUI/drawer/drawer",
+    "pages/extUI/fav/fav",
+    "pages/extUI/goods-nav/goods-nav",
+    "pages/extUI/icon/icon",
+    "pages/extUI/load-more/load-more",
+    "pages/extUI/nav-bar/nav-bar",
+    "pages/extUI/number-box/number-box",
+    "pages/extUI/popup/popup",
+    "pages/extUI/segmented-control/segmented-control",
+    "pages/extUI/tag/tag",
+    "pages/extUI/list/list",
+    "pages/extUI/card/card",
+    "pages/extUI/collapse/collapse",
+    "pages/extUI/pagination/pagination",
+    "pages/extUI/swiper-dot/swiper-dot",
+    "pages/extUI/grid/grid",
+    "pages/extUI/rate/rate",
+    "pages/extUI/search-bar/search-bar",
+    "pages/extUI/steps/steps",
+    "pages/extUI/notice-bar/notice-bar",
+    "pages/extUI/swipe-action/swipe-action",
+    "pages/extUI/calendar/calendar",
+    "pages/extUI/fab/fab",
+    "pages/extUI/indexed-list/indexed-list"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Hello uniapp",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "backgroundColorTop": "#F4F5F6",
+    "backgroundColorBottom": "#F4F5F6"
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

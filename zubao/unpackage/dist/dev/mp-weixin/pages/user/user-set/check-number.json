@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "top-tar": "/pages/login/components/toptar",
+    "phone-title": "/components/phone-title/phone-title"
+  }
+}

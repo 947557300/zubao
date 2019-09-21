@@ -1,12 +1,27 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 	{
+	    "path" : "pages/order/order-evaluate",
+	    "style" : {
+			"navigationBarTitleText": "评论",
+			 "navigationStyle":"custom"
+		}
+	}
+	,{
 	    "path" : "pages/user/user-set/user-set",
 	   "style": {
 	   	"navigationBarTitleText": "uni-app",
 	   	 "navigationStyle":"custom"
 	   }	
 	},
+	{
+	    "path":"pages/user/user-set/check-number",
+	   "style": {
+	   	"navigationBarTitleText": "uni-app",
+	   	 "navigationStyle":"custom"
+	   }	
+	},
+	
 	{
 	  "path":"pages/login/login",
 	  	"style": {
@@ -54,6 +69,7 @@
 		  	 "navigationStyle":"custom"
 		  }	
 		}
+        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

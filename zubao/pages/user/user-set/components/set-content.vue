@@ -13,11 +13,11 @@
 		 			<view class="graytext">性别</view>
 		 			<view class="grayer">{{list.sex}}</view> 
 		 </view>
-		 <view class="flex" @tap="changnumshow()">
+		 <view class="flex" @tap="changnumshow(list.wxnum)">
 		 			<view class="graytext">微信号</view>
 		 			<view class="grayer">{{list.wxnum}}</view> 
 		 </view>
-		 <view class="flex">
+		 <view class="flex" @tap="changnewphone()">
 		 			<view class="graytext">手机号</view>
 		 			<view class="grayer">{{list.phone}}</view> 
 		 </view>
@@ -57,11 +57,15 @@
 				 <view class="sex-yes graytext" @tap="changsexyes()">确定</view>
 			 </view>
 			  <view class="sex-bottom">
-				 <radio-group @change="radioChange()">
-				 <label class="radio"><radio color="#ea838f" style="transform:scale(0.7)" value="1" :checked="list.sex"/>男</label>
-				 <label class="radio"><radio color="#ea838f" style="transform:scale(0.7)" value="0" :checked="!list.sex"/>女</label>
-				 
-				<!-- <label class="radio"><radio color="#ea838f" style="transform:scale(0.7)" :value="item.value" v-for="(item,index) of sexlist" :key="item.value"/>{{item.name}}</label>-->
+				 <radio-group @change="radioChange">
+					  <label class="label"  v-for="(item,index) in sexlist" :key="item.value">
+					                     <view>
+					                         <radio  color="#ea838f" :value="item.value" :checked="index==current"/>
+					                     </view>
+					                     <view>{{item.name}}</view>
+					                 </label>
+									
+				 				 
 				 </radio-group>
 			  </view>
 		  </view>
@@ -94,18 +98,20 @@
 				userimg:"../../../../static/login/part5_picture2.png",
 				showname:false,
 				showsex:false,
-				shownum:true,
+				shownum:false,
 				checkname:"",
+				num:"",
 				sexlist:[
 					{
-					value:"1",
+					value:"男",
 					name:"男"
 				    },
 					{
-					value:"0",
+					value:"女",
 					name:"女"
 					},
-				]
+				],
+				current:'',
 			
 			}
 		},
@@ -113,7 +119,9 @@
 		  this.list.phone=this.hidden(this.list.phone,3,4);
 		  this.list.sfz=this.hidden(this.list.sfz,4,4);
 		  this.hiddenrz();
+		  this.current=this.list.sex;
 		  this.hiddensex();
+		  
 		},
 		methods:{
 			gorz(){
@@ -150,7 +158,7 @@
 			},
 			hiddensex(){
 				var sex=this.list.sex;
-				if(sex==1){
+				if(sex==0){
 					sex="男"
 				}else{
 					sex="女"
@@ -172,21 +180,37 @@
 			},
 		    changnameno(){
 				this.showname=false;
+				this.checkname="";
 			},
 		    changnameyes(){
 				this.showname=false;
 				this.list.wxname=this.checkname;
+				this.checkname="";
 			},
-			changnumshow(){
-				this.shownum=true;
+			changnumshow(ev){
+				if(ev=="未定义"){
+					this.list.wxnum=this.num;
+					uni.showToast({
+					    title: '绑定成功',
+						icon:"none",
+					    duration: 2000
+					});
+				}else{
+				  this.shownum=true;	
+				}
 			},
 			changnumno(){
 				this.shownum=false;
 			},
 			changnumyes(){
 				this.shownum=false;
+				this.num=this.list.wxnum;
+				uni.showToast({
+				    title: '解绑成功',
+					icon:"none",
+				    duration: 2000
+				});
 				this.list.wxnum="未定义";
-				
 			},
 		   	changsexshow(){
 				this.showsex=true;
@@ -195,12 +219,31 @@
 				this.showsex=false;
 			},
 		    changsexyes(){
+			     if(this.current==0){
+					 this.list.sex="男"
+				 }else{
+					this.list.sex="女" 
+				 };
+				 uni.showToast({
+				     title: '修改成功',
+				 	icon:"none",
+				     duration: 2000
+				 });
 				this.showsex=false;
 			},
-			radioChange(e){
-			 console.log(e.target.value);
-			}
-			   
+			radioChange(evt) {
+			    for (let i = 0; i < this.sexlist.length; i++) {
+			        if (this.sexlist[i].value === evt.target.value) {
+			            this.current = i;
+			            break;
+			        }
+			    }
+			},
+			changnewphone(){
+			  uni.navigateTo({
+			  	url:"./check-number"
+			  })	
+			},
 		}
 	}
 </script>
@@ -339,6 +382,13 @@
 			 display:flex;
 			 justify-content:space-around;
 			 align-items:center;
+			 .label{
+				 display:flex;
+				 align-items:center;
+				  radio{
+					transform:scale(0.7);
+				  }
+			 }
 		   }
 	   }
 	  }

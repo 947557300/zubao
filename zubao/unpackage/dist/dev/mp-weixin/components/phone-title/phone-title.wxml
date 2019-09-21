@@ -1,0 +1,1 @@
+<view class="content data-v-7adcf952"><view class="{{['layout data-v-7adcf952',titles.color?'padding':'']}}"><view class="title data-v-7adcf952">{{titles.title}}</view><view class="ftitle data-v-7adcf952">{{titles.ftitle}}</view></view></view>

@@ -17,7 +17,7 @@ import SetCon from "./components/set-content.vue"
 			return {
 				msglist:{
 					wxname:"我要上春晚",
-				    sex:1,
+				    sex:0,
 					wxnum:"我要上春晚",
 					phone:13111111111,
 					rzzt:true,
