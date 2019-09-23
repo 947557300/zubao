@@ -1,1 +1,1 @@
-<view></view>
+<view><top-tar vue-id="1" backtext="发表评价" bind:__l="__l"></top-tar><eval-uate vue-id="2" bind:__l="__l"></eval-uate></view>
