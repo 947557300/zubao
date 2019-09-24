@@ -1,5 +1,6 @@
 <template>
-	<view class="content" :style="'height:'+height+'px'">
+	<view class="content">
+		<view class="productout">
 		<view class="product">
 			<view class="product-con flex">
 				<image src="../../../static/login/part5_picture2.png"></image>
@@ -10,10 +11,67 @@
 		</view>
 		<view class="eval flex">
 		 <view class="all">整体评价</view>
-		 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="100" v-on:changg="chang11($event)"></ra-te>
+		 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="100" @changee="chang($event)" class="rate"></ra-te>
+		 <view class="glaytext pjname">非常好</view>
 		</view>
 	</view>
-     </view>
+	</view>
+	<view class="inputout">
+	<view class="eval-input">
+	 <textarea value=""  class="textare" placeholder="宝贝满足你的期待吗?" maxlength="500" placeholder-style="color:#b9b9b9" />
+	 <view class="input-bottom flex">
+		<view class="input-img" @tap="scimg()">
+		<view v-if="!imgtrue" class="imgtrue">	
+		 <image src="../../../static/order/order-evaluate/img.png"></image>
+		  <view>添加图片</view>
+		 </view>
+		  <view v-if="imgtrue" class="imgtrue">
+			<image :src="imglist"></image>  
+		  </view>
+		  <image src="../../../static/order/order-evaluate/错误%20(1).png" class="detele" @tap="hehe()"></image>
+		</view> 
+		<view class="input-video" @tap="scvideo()">
+		   <view v-if="!srctrue">
+			<image src="../../../static/order/order-evaluate/video.png">
+			<view>添加视频</view>
+			</view>
+			<view v-if="srctrue">
+			 <video :src="src" class="srctrue"></video>	
+			</view>
+		</view>
+	 </view>
+	</view>
+	</view>
+	<view class="nmout">
+	 <view class="flex nm">	  
+	   <view class="flex" @tap="nmchange()">
+		   <image src="../../../static/login/cirle.png" v-if="!ok"></image>
+		   <image src="../../../static/login/ok.png" v-if="ok"></image>
+		    <text class="imgright">匿名</text> 
+	   </view>
+		  
+		 <view class="glaytext">{{nmtitle}}</view>
+	 </view>
+	 </view>
+	 <view class="otherpjout">
+	  <view class="otherpj">	 
+	   <view>店铺评价</view>
+		<view class="flex flextop">
+		 <view>物流服务</view>
+		 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="0" @changee="chang1($event)" class="rate"></ra-te>
+		 <view class="glaytext pjname">非常好</view>
+		</view>
+			<view class="flex flextop">
+			 <view>服务态度</view>
+			 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="0" @changee="chang2($event)" class="rate"></ra-te>
+			 <view class="glaytext pjname">非常好</view>
+			</view>
+	 </view>
+	 </view>
+	  <view class="fabuout">
+		    <view class="fabu">发布</view>		
+	  </view>
+	 </view>
 </template>
 
 <script>
@@ -26,44 +84,104 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 			 return{
 				 height:'',
 				 color:'#f2f2f2',
-				 activeColor:"#ff5204",
+				 activeColor:"#eb828f",
 				 size:"30",
 				 ss:"",
+				 pjlist:[
+					 {name:"差"},
+					 {name:"一般"},
+					 {name:"好"},
+					 {name:"很好"},
+					 {name:"非常好"},
+				 ],
+				evalcontent:"",
+				imglist:"",
+				imgtrue:true,
+				ok:true,
+				nmtitle:"你写的评价会以匿名的形式展现",
+				src:"",
+				srctrue:false,
 			 }
 		 },
 		 methods:{
-			 chang11($event){
-			   console.log($event)
-			 }
-		 },
-		 created(){
-			 const system = uni.getSystemInfoSync()
-			 var statusBarHeight = (system.statusBarHeight || 25)+45;
-			 this.height = Math.floor(uni.getSystemInfoSync().windowHeight-statusBarHeight);
-			 // #ifdef APP-PLUS
-			 this.height = Math.floor(uni.getSystemInfoSync().windowHeight - 56);
-			 // #endif 
-				
+			 chang($event){ 
+			 },
+			 chang1($event){
+			 },
+			 chang2($event){
+			 },
+			 hehe(){
+				console.log(123456); 
+			 },
+			 scimg(){
+			 				 var that=this;
+			 				if(that.imgtrue==false){ 
+			 				 uni.chooseImage({
+			 				 	count:1,
+			 					sizeType:"compressed",
+			 					success:function(res){
+			 				    that.imgtrue=true;		
+			 					that.imglist=res.tempFilePaths;	   
+			 					}
+			 				 })
+			 				 }else{
+			 				  uni.previewImage({
+			 				              urls:that.imglist,
+			 								   })
+			 				 }
+			 },
+			 scvideo(){
+				    var that=this;
+				           uni.chooseVideo({
+				                           count: 1,
+				                           sourceType: ['camera', 'album'],
+				                           success: function (res) {
+											   that.srctrue=true;
+				                               that.src = res.tempFilePath;
+				                           }
+				                       });
+				      
+				        
+				    
+			 },
+			 nmchange(){
+				 this.ok=!this.ok;
+			  	 if(this.ok==true){
+					 this.nmtitle="你写的评价会以匿名的形式展现"
+				 }else{
+					this.ok==false;
+					this.nmtitle="公开的评价会展示在个人页面"
+				 }
+			 },
 		 }
-		
-	 }
+		 
+		}
+	 
 </script>
 
 <style lang="scss" scoped>
 	.content{
 			width:100%;
-			background:#f3f3f3;
-		    font-size:30upx;	
+		    font-size:30upx;
+		    background:#f2f2f2;
+		    color:#3e3e3e;
+			position:relative;
 			.flex{
 			  display:flex;
 			  align-items:center;	  
 			}
+			.rate{
+			  margin:0 20upx 0 20upx;	
+			}
 			.glaytext{
 				color:#b9b9b9;
 			}
+			.productout{
+			  border-bottom:2upx solid #f2f2f2;  
 			 .product{
-				padding:50upx 20upx 30upx;
-				background:#fff;
+				padding-top:50upx;
+				width:94%;
+				  margin:0 auto;
 			    .product-con{
 				  justify-content: space-between;
 				image{
@@ -72,8 +190,7 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 					   
 				}
 				.title-cont{
-				  width:82%;
-			
+				  width:84%;
 				  view{
 				   overflow: hidden;
 				   text-overflow: ellipsis;
@@ -85,15 +202,114 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 			   }		  
 				}
 		       .eval{
-				  margin-top:50upx; 
+				  margin:50upx 0 20upx 0; 
+				
 				  .all{
 					 font-weight:bold;
-					 margin-right:20upx;
 					 font-size:32upx; 
-				  } 
-				   
+				  }
+				     
 			   }       		
-		 
 			 }
-	}
+			 }     
+				 .productout,.inputout,.nmout,.otherpjout{
+					width:100%;
+					background:#fff; 
+				 } 
+				   .eval-input{
+				   	 width:94%;
+					 margin:0 auto;
+					 padding:20upx 0;
+					 border-bottom:2upx solid #f2f2f2; 
+				   	 .textare{
+				       height:170upx;
+					  width:100%; 
+				   				 }
+					.input-bottom{
+					  
+					  .input-img,.input-video{
+						 position:relative; 
+						 font-size:20upx;
+						 color:#8a8a8a;
+						 text-align:center;
+						 width:22%;
+						 height:160upx;
+						 border:4upx dotted #f2f2f2;
+						 margin-right:3%;
+						.imgtrue{
+							width:100%;
+							height:100%;
+						}
+						.srctrue{
+						  width:180upx;
+						  height:180upx;	  
+						}
+						.detele{
+						  width:50upx;
+						  height:50upx;
+						  position:absolute;
+						  right:-10upx;
+						  top:-18upx;			
+						}
+						 .delete{
+						  background:rgba(0,0,0,.5);
+						  width:50upx;
+						  height:50upx; 
+						  position:absolute;
+						  right:-10upx;
+						  top:-18upx;
+						  border-radius:50%;
+						  image{
+							 position:relative;
+							 top:-18upx;
+							 width:20upx;
+							 height:20upx; 
+						  } 
+						 }
+						image{
+						 margin-top:36upx;	
+						  width:50upx;
+						  height:50upx;	  
+						}  
+					  }	
+					}			 
+			 }
+			 .nm{
+				margin:0 auto;
+				 width:94%;
+				padding:20upx 0;
+			    justify-content: space-between;
+				font-size:24upx;
+			     image{
+				   width:50upx;
+				   height:50upx;
+				   margin-right:14upx;			   
+				 }	
+				
+			 }
+			 .otherpj{
+			   font-size:26upx;
+			   width:94%;
+			   margin:20upx auto 0;
+			  padding-top:30upx;
+			   .flextop{
+				  margin-top:20upx; 
+			   }
+			 }
+			 .fabuout{
+			  position:fixed;
+			  bottom:0;
+			  left:0;
+		      width:100%;
+			 .fabu{
+				  margin-top:20upx;
+				  height:100upx;
+				  line-height:100upx;
+				  text-align:center;
+				  color:#fff;
+				  background:#ea838f;		  
+				  font-size:28upx;	   
+			  }
+			 }
+				 }
 </style>

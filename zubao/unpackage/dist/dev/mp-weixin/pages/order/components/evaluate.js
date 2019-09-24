@@ -125,6 +125,64 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   components: {
     RaTe: RaTe },
@@ -133,25 +191,75 @@ __webpack_require__.r(__webpack_exports__);
     return {
       height: '',
       color: '#f2f2f2',
-      activeColor: "#ff5204",
+      activeColor: "#eb828f",
       size: "30",
-      ss: "" };
+      ss: "",
+      pjlist: [
+      { name: "差" },
+      { name: "一般" },
+      { name: "好" },
+      { name: "很好" },
+      { name: "非常好" }],
+
+      evalcontent: "",
+      imglist: "",
+      imgtrue: true,
+      ok: true,
+      nmtitle: "你写的评价会以匿名的形式展现",
+      src: "",
+      srctrue: false };
 
   },
   methods: {
-    chang11: function chang11($event) {
-      console.log($event);
-    } },
+    chang: function chang($event) {
+    },
+    chang1: function chang1($event) {
+    },
+    chang2: function chang2($event) {
+    },
+    hehe: function hehe() {
+      console.log(123456);
+    },
+    scimg: function scimg() {
+      var that = this;
+      if (that.imgtrue == false) {
+        uni.chooseImage({
+          count: 1,
+          sizeType: "compressed",
+          success: function success(res) {
+            that.imgtrue = true;
+            that.imglist = res.tempFilePaths;
+          } });
 
-  created: function created() {
-    var system = uni.getSystemInfoSync();
-    var statusBarHeight = (system.statusBarHeight || 25) + 45;
-    this.height = Math.floor(uni.getSystemInfoSync().windowHeight - statusBarHeight);
+      } else {
+        uni.previewImage({
+          urls: that.imglist });
+
+      }
+    },
+    scvideo: function scvideo() {
+      var that = this;
+      uni.chooseVideo({
+        count: 1,
+        sourceType: ['camera', 'album'],
+        success: function success(res) {
+          that.srctrue = true;
+          that.src = res.tempFilePath;
+        } });
 
 
 
 
-  } };exports.default = _default;
+    },
+    nmchange: function nmchange() {
+      this.ok = !this.ok;
+      if (this.ok == true) {
+        this.nmtitle = "你写的评价会以匿名的形式展现";
+      } else {
+        this.ok == false;
+        this.nmtitle = "公开的评价会展示在个人页面";
+      }
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
