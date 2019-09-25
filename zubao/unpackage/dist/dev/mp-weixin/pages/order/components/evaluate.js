@@ -105,7 +105,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var RaTe = function RaTe() {return __webpack_require__.e(/*! import() | components/uni-ui/uni-rate/uni-rate */ "components/uni-ui/uni-rate/uni-rate").then(__webpack_require__.bind(null, /*! ../../../components/uni-ui/uni-rate/uni-rate.vue */ 117));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 143));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var RaTe = function RaTe() {return __webpack_require__.e(/*! import() | components/uni-ui/uni-rate/uni-rate */ "components/uni-ui/uni-rate/uni-rate").then(__webpack_require__.bind(null, /*! ../../../components/uni-ui/uni-rate/uni-rate.vue */ 131));};var _default =
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -189,7 +199,6 @@ __webpack_require__.r(__webpack_exports__);
 
   data: function data() {
     return {
-      height: '',
       color: '#f2f2f2',
       activeColor: "#eb828f",
       size: "30",
@@ -203,22 +212,58 @@ __webpack_require__.r(__webpack_exports__);
 
       evalcontent: "",
       imglist: "",
-      imgtrue: true,
+      imgtrue: false,
       ok: true,
       nmtitle: "你写的评价会以匿名的形式展现",
       src: "",
-      srctrue: false };
+      srctrue: false,
+      change: "非常好",
+      change2: "",
+      change3: "非常好" };
 
   },
+  watch: {},
+
+
   methods: {
     chang: function chang($event) {
+      var e = $event;
+      console.log(e);
+      var watch = this.watchvalue(e);function
+      watch() {return _watch.apply(this, arguments);}function _watch() {_watch = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var a;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                  a = title;
+                  console.log(a);
+                  this.change = a;case 3:case "end":return _context.stop();}}}, _callee, this);}));return _watch.apply(this, arguments);}
+
+
     },
     chang1: function chang1($event) {
     },
     chang2: function chang2($event) {
     },
-    hehe: function hehe() {
-      console.log(123456);
+    watchvalue: function watchvalue(e) {
+      var title = "";
+      return new Promise(function (resolve) {
+        setTimeout(function () {
+          if (e == 1) {
+            title = "非常差";
+          } else if (e == 2) {
+            title = "很差";
+          } else if (e == 3) {
+            title = "一般";
+          } else if (e == 4) {
+            title = "很好";
+          } else if (e == 5) {
+            title = "非常好";
+          }
+          resolve(title);
+        }, 10);
+      });
+    },
+    deleimg: function deleimg() {
+      this.imgtrue = false;
+      this.imglist = '';
+      console.log(123);
     },
     scimg: function scimg() {
       var that = this;

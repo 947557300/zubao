@@ -12,7 +12,7 @@
 		<view class="eval flex">
 		 <view class="all">整体评价</view>
 		 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="100" @changee="chang($event)" class="rate"></ra-te>
-		 <view class="glaytext pjname">非常好</view>
+		 <view class="glaytext pjname">{{change}}</view>
 		</view>
 	</view>
 	</view>
@@ -20,28 +20,36 @@
 	<view class="eval-input">
 	 <textarea value=""  class="textare" placeholder="宝贝满足你的期待吗?" maxlength="500" placeholder-style="color:#b9b9b9" />
 	 <view class="input-bottom flex">
-		<view class="input-img" @tap="scimg()">
-		<view v-if="!imgtrue" class="imgtrue">	
-		 <image src="../../../static/order/order-evaluate/img.png"></image>
-		  <view>添加图片</view>
-		 </view>
-		  <view v-if="imgtrue" class="imgtrue">
-			<image :src="imglist"></image>  
-		  </view>
-		  <image src="../../../static/order/order-evaluate/错误%20(1).png" class="detele" @tap="hehe()"></image>
-		</view> 
+	  <view class="input-imgout">
+		 <image src="../../../static/order/order-evaluate/false.png" class="delete" v-if="imgtrue" @tap.stop="deleimg()"></image> 
+		<view class="input-img"  @tap="scimg()">
+			<view v-if="!imgtrue" class="imgfalse">
+			 <image src="../../../static/order/order-evaluate/img.png"></image>
+			  <view>添加图片</view>
+			 </view>
+			  <view v-if="imgtrue" class="imgtrue">
+				<image :src="imglist"></image>  
+			  </view>
+		</view>  
+	  </view>
+	  <view class="input-videoout">
+		   <image src="../../../static/order/order-evaluate/false.png" class="delete" v-if="srctrue"></image> 
 		<view class="input-video" @tap="scvideo()">
-		   <view v-if="!srctrue">
-			<image src="../../../static/order/order-evaluate/video.png">
+		   <view v-if="!srctrue" class="srcfalse">
+			<image src="../../../static/order/order-evaluate/video.png" >
 			<view>添加视频</view>
 			</view>
 			<view v-if="srctrue">
 			 <video :src="src" class="srctrue"></video>	
 			</view>
 		</view>
-	 </view>
+			
+		</view>    
+	  </view>	   
+	 </view> 
 	</view>
-	</view>
+	
+	
 	<view class="nmout">
 	 <view class="flex nm">	  
 	   <view class="flex" @tap="nmchange()">
@@ -53,18 +61,19 @@
 		 <view class="glaytext">{{nmtitle}}</view>
 	 </view>
 	 </view>
+	 
 	 <view class="otherpjout">
 	  <view class="otherpj">	 
 	   <view>店铺评价</view>
 		<view class="flex flextop">
 		 <view>物流服务</view>
 		 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="0" @changee="chang1($event)" class="rate"></ra-te>
-		 <view class="glaytext pjname">非常好</view>
+		 <view class="glaytext pjname">{{change2}}</view>
 		</view>
 			<view class="flex flextop">
 			 <view>服务态度</view>
 			 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="0" @changee="chang2($event)" class="rate"></ra-te>
-			 <view class="glaytext pjname">非常好</view>
+			 <view class="glaytext pjname">{{change3}}</view>
 			</view>
 	 </view>
 	 </view>
@@ -72,6 +81,7 @@
 		    <view class="fabu">发布</view>		
 	  </view>
 	 </view>
+	
 </template>
 
 <script>
@@ -82,7 +92,6 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 		 },
 		 data(){
 			 return{
-				 height:'',
 				 color:'#f2f2f2',
 				 activeColor:"#eb828f",
 				 size:"30",
@@ -96,22 +105,58 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				 ],
 				evalcontent:"",
 				imglist:"",
-				imgtrue:true,
+				imgtrue:false,
 				ok:true,
 				nmtitle:"你写的评价会以匿名的形式展现",
 				src:"",
 				srctrue:false,
+				change:"非常好",
+				change2:"",
+				change3:"非常好",
 			 }
 		 },
+		 watch:{
+			 
+		 },
 		 methods:{
-			 chang($event){ 
-			 },
+			 chang($event){
+			  var e=$event;
+			  console.log(e);
+			  var watch=this.watchvalue(e);
+			  async function watch(){
+				  var a=title;
+				  console.log(a);
+				this.change=a;
+			  }
+	  
+			},
 			 chang1($event){
 			 },
 			 chang2($event){
 			 },
-			 hehe(){
-				console.log(123456); 
+			 watchvalue(e){
+				 var title="";	 
+				 return new Promise(function(resolve){
+					 setTimeout(function(){
+						 if(e==1){
+						 					title="非常差" 
+						 }else if(e==2){
+						 					 title="很差"
+						 					 }else if(e==3){
+						 					 title="一般"
+						 					 }else if(e==4){
+						 					 title="很好"
+						 					 }else if(e==5){
+						 					 title="非常好"
+						 					 }
+						 resolve(title);
+					 },10)
+				 }) 
+			 },
+			deleimg(){
+				this.imgtrue=false;
+				this.imglist='';
+				console.log(123)
 			 },
 			 scimg(){
 			 				 var that=this;
@@ -153,6 +198,7 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 					this.nmtitle="公开的评价会展示在个人页面"
 				 }
 			 },
+			 
 		 }
 		 
 		}
@@ -169,6 +215,9 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 			.flex{
 			  display:flex;
 			  align-items:center;	  
+			}
+			.pjname{
+			  margin-top:5upx;	
 			}
 			.rate{
 			  margin:0 20upx 0 20upx;	
@@ -211,7 +260,7 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				     
 			   }       		
 			 }
-			 }     
+			 }
 				 .productout,.inputout,.nmout,.otherpjout{
 					width:100%;
 					background:#fff; 
@@ -226,53 +275,45 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 					  width:100%; 
 				   				 }
 					.input-bottom{
-					  
-					  .input-img,.input-video{
-						 position:relative; 
-						 font-size:20upx;
-						 color:#8a8a8a;
-						 text-align:center;
-						 width:22%;
-						 height:160upx;
-						 border:4upx dotted #f2f2f2;
-						 margin-right:3%;
-						.imgtrue{
+					    width:100%;
+						margin-top:20upx;	
+					  .input-imgout,.input-videoout{
+						  width:22%;
+						  height:160upx; 
+						 position:relative;
+						 margin-right:4%;
+						.delete{
+						  position:absolute;
+						 width:32upx;
+						 height:32upx;
+						 right:-16upx;
+						 top:-12upx;
+						 z-index:1;
+						} 
+					   .input-img,.input-video{
+						    position:absolute;
+							font-size:20upx;
+							color:#8a8a8a;
+							text-align:center;
 							width:100%;
-							height:100%;
-						}
-						.srctrue{
-						  width:180upx;
-						  height:180upx;	  
-						}
-						.detele{
-						  width:50upx;
-						  height:50upx;
-						  position:absolute;
-						  right:-10upx;
-						  top:-18upx;			
-						}
-						 .delete{
-						  background:rgba(0,0,0,.5);
-						  width:50upx;
-						  height:50upx; 
-						  position:absolute;
-						  right:-10upx;
-						  top:-18upx;
-						  border-radius:50%;
-						  image{
-							 position:relative;
-							 top:-18upx;
-							 width:20upx;
-							 height:20upx; 
-						  } 
-						 }
-						image{
-						 margin-top:36upx;	
-						  width:50upx;
-						  height:50upx;	  
-						}  
+							height:160upx;
+							border:4upx dotted #f2f2f2;
+							.imgfalse,.srcfalse{
+						  	image{
+							  width:50upx;
+							  height:50upx;
+							  margin-top:40upx;		
+							}
+							}
+						   .imgtrue{
+							   image{
+							   width:100%;
+							   height:160upx;
+							   }
+						   }	
+					   }	  
 					  }	
-					}			 
+					}		 
 			 }
 			 .nm{
 				margin:0 auto;
@@ -285,7 +326,6 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				   height:50upx;
 				   margin-right:14upx;			   
 				 }	
-				
 			 }
 			 .otherpj{
 			   font-size:26upx;
@@ -311,5 +351,5 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				  font-size:28upx;	   
 			  }
 			 }
-				 }
+			}	 
 </style>

@@ -41,6 +41,9 @@
         -ms-flex-align: center;
             align-items: center;
 }
+.content .pjname.data-v-3db15809 {
+    margin-top: 5rpx;
+}
 .content .rate.data-v-3db15809 {
     margin: 0 20rpx 0 20rpx;
 }
@@ -98,50 +101,41 @@
       height: 170rpx;
       width: 100%;
 }
-.content .eval-input .input-bottom .input-img.data-v-3db15809, .content .eval-input .input-bottom .input-video.data-v-3db15809 {
-      position: relative;
-      font-size: 20rpx;
-      color: #8a8a8a;
-      text-align: center;
-      width: 22%;
-      height: 160rpx;
-      border: 4rpx dotted #f2f2f2;
-      margin-right: 3%;
+.content .eval-input .input-bottom.data-v-3db15809 {
+      width: 100%;
+      margin-top: 20rpx;
 }
-.content .eval-input .input-bottom .input-img .imgtrue.data-v-3db15809, .content .eval-input .input-bottom .input-video .imgtrue.data-v-3db15809 {
-        width: 100%;
-        height: 100%;
+.content .eval-input .input-bottom .input-imgout.data-v-3db15809, .content .eval-input .input-bottom .input-videoout.data-v-3db15809 {
+        width: 22%;
+        height: 160rpx;
+        position: relative;
+        margin-right: 4%;
 }
-.content .eval-input .input-bottom .input-img .srctrue.data-v-3db15809, .content .eval-input .input-bottom .input-video .srctrue.data-v-3db15809 {
-        width: 180rpx;
-        height: 180rpx;
+.content .eval-input .input-bottom .input-imgout .delete.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .delete.data-v-3db15809 {
+          position: absolute;
+          width: 32rpx;
+          height: 32rpx;
+          right: -16rpx;
+          top: -12rpx;
+          z-index: 1;
 }
-.content .eval-input .input-bottom .input-img .detele.data-v-3db15809, .content .eval-input .input-bottom .input-video .detele.data-v-3db15809 {
-        width: 50rpx;
-        height: 50rpx;
-        position: absolute;
-        right: -10rpx;
-        top: -18rpx;
+.content .eval-input .input-bottom .input-imgout .input-img.data-v-3db15809, .content .eval-input .input-bottom .input-imgout .input-video.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-img.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-video.data-v-3db15809 {
+          position: absolute;
+          font-size: 20rpx;
+          color: #8a8a8a;
+          text-align: center;
+          width: 100%;
+          height: 160rpx;
+          border: 4rpx dotted #f2f2f2;
 }
-.content .eval-input .input-bottom .input-img .delete.data-v-3db15809, .content .eval-input .input-bottom .input-video .delete.data-v-3db15809 {
-        background: rgba(0, 0, 0, 0.5);
-        width: 50rpx;
-        height: 50rpx;
-        position: absolute;
-        right: -10rpx;
-        top: -18rpx;
-        border-radius: 50%;
+.content .eval-input .input-bottom .input-imgout .input-img .imgfalse image.data-v-3db15809, .content .eval-input .input-bottom .input-imgout .input-img .srcfalse image.data-v-3db15809, .content .eval-input .input-bottom .input-imgout .input-video .imgfalse image.data-v-3db15809, .content .eval-input .input-bottom .input-imgout .input-video .srcfalse image.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-img .imgfalse image.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-img .srcfalse image.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-video .imgfalse image.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-video .srcfalse image.data-v-3db15809 {
+            width: 50rpx;
+            height: 50rpx;
+            margin-top: 40rpx;
 }
-.content .eval-input .input-bottom .input-img .delete image.data-v-3db15809, .content .eval-input .input-bottom .input-video .delete image.data-v-3db15809 {
-          position: relative;
-          top: -18rpx;
-          width: 20rpx;
-          height: 20rpx;
-}
-.content .eval-input .input-bottom .input-img image.data-v-3db15809, .content .eval-input .input-bottom .input-video image.data-v-3db15809 {
-        margin-top: 36rpx;
-        width: 50rpx;
-        height: 50rpx;
+.content .eval-input .input-bottom .input-imgout .input-img .imgtrue image.data-v-3db15809, .content .eval-input .input-bottom .input-imgout .input-video .imgtrue image.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-img .imgtrue image.data-v-3db15809, .content .eval-input .input-bottom .input-videoout .input-video .imgtrue image.data-v-3db15809 {
+            width: 100%;
+            height: 160rpx;
 }
 .content .nm.data-v-3db15809 {
     margin: 0 auto;
