@@ -20,18 +20,25 @@
 	<view class="eval-input">
 	 <textarea value=""  class="textare" placeholder="宝贝满足你的期待吗?" maxlength="500" placeholder-style="color:#b9b9b9" />
 	 <view class="input-bottom flex">
-	  <view class="input-imgout">
-		 <image src="../../../static/order/order-evaluate/false.png" class="delete" v-if="imgtrue" @tap.stop="deleimg()"></image> 
-		<view class="input-img"  @tap="scimg()">
-			<view v-if="!imgtrue" class="imgfalse">
+		 
+	  <view class="input-imgout" v-for="(item,index) of imglist" :key="index" @tap="scimg()">
+		 <image src="../../../static/order/order-evaluate/false.png" class="delete" v-if="item.imgtrue" @tap.stop="deleimg(index)"></image> 
+		<view class="input-img" >
+			<view v-if="!item.imgtrue" class="imgfalse">
 			 <image src="../../../static/order/order-evaluate/img.png"></image>
-			  <view>添加图片</view>
+			  <view>{{item.imgtext}}</view>
 			 </view>
-			  <view v-if="imgtrue" class="imgtrue">
-				<image :src="imglist"></image>  
+			  <view v-if="item.imgtrue" class="imgtrue">
+				<image :src="item.path"></image>
 			  </view>
 		</view>  
 	  </view>
+	  
+	  
+	  
+	  
+	  
+	  
 	  <view class="input-videoout">
 		   <image src="../../../static/order/order-evaluate/false.png" class="delete" v-if="srctrue"></image> 
 		<view class="input-video" @tap="scvideo()">
@@ -68,12 +75,12 @@
 		<view class="flex flextop">
 		 <view>物流服务</view>
 		 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="0" @changee="chang1($event)" class="rate"></ra-te>
-		 <view class="glaytext pjname">{{change2}}</view>
+		 <view class="glaytext pjname">{{change1}}</view>
 		</view>
 			<view class="flex flextop">
 			 <view>服务态度</view>
 			 <ra-te :color="color" :size="size" :activeColor="activeColor" :value="0" @changee="chang2($event)" class="rate"></ra-te>
-			 <view class="glaytext pjname">{{change3}}</view>
+			 <view class="glaytext pjname">{{change2}}</view>
 			</view>
 	 </view>
 	 </view>
@@ -104,76 +111,102 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 					 {name:"非常好"},
 				 ],
 				evalcontent:"",
-				imglist:"",
-				imgtrue:false,
+				imglist:[
+					{
+					 path:'',
+					 imgtrue:false,
+					 imgtext:"添加照片"	  
+					}
+				],
+				tslength:"",
 				ok:true,
 				nmtitle:"你写的评价会以匿名的形式展现",
 				src:"",
 				srctrue:false,
 				change:"非常好",
+				change1:"",
 				change2:"",
-				change3:"非常好",
 			 }
-		 },
-		 watch:{
-			 
 		 },
 		 methods:{
 			 chang($event){
-			  var e=$event;
-			  console.log(e);
-			  var watch=this.watchvalue(e);
-			  async function watch(){
-				  var a=title;
-				  console.log(a);
-				this.change=a;
-			  }
+			  var  e=$event;
+			  var  a=this.watchvalue(e);
+			  this.change=a;
 	  
 			},
 			 chang1($event){
+				 var  e=$event;
+				 var  a=this.watchvalue(e);
+				 this.change1=a;
 			 },
 			 chang2($event){
+				 var  e=$event;
+				 var  a=this.watchvalue(e);
+				 this.change2=a;
 			 },
 			 watchvalue(e){
 				 var title="";	 
-				 return new Promise(function(resolve){
-					 setTimeout(function(){
-						 if(e==1){
-						 					title="非常差" 
-						 }else if(e==2){
-						 					 title="很差"
-						 					 }else if(e==3){
-						 					 title="一般"
-						 					 }else if(e==4){
-						 					 title="很好"
-						 					 }else if(e==5){
-						 					 title="非常好"
-						 					 }
-						 resolve(title);
-					 },10)
-				 }) 
+				if(e==1){
+									title="非常差" 
+				}else if(e==2){
+									 title="很差"
+									 }else if(e==3){
+									 title="一般"
+									 }else if(e==4){
+									 title="很好"
+									 }else if(e==5){
+									 title="非常好"
+									 }
+				   return title;
 			 },
-			deleimg(){
+			deleimg(index){
 				this.imgtrue=false;
-				this.imglist='';
-				console.log(123)
+				this.imglist.splice(index,1);
+				var length=this.imglist.length;
+				if(length==0){
+					var starobj={
+					 path:'',
+					 imgtrue:false,
+					 imgtext:"添加照片"
+					};
+				 this.imglist.push(starobj);	
+				}
+				
 			 },
 			 scimg(){
 			 				 var that=this;
-			 				if(that.imgtrue==false){ 
 			 				 uni.chooseImage({
-			 				 	count:1,
+			 				 	count:5,
 			 					sizeType:"compressed",
 			 					success:function(res){
 			 				    that.imgtrue=true;		
-			 					that.imglist=res.tempFilePaths;	   
+							    var ts=res.tempFiles;
+								var tslength=res.tempFiles.length;
+									
+								for(var i=0; i<ts.length;i++){
+									ts[i].imgtrue=true;
+								}	
+								that.imglist.push(...ts);
+								if(tslength<5){
+									var enday=[
+										{path:"",
+										imgtrue:false,
+										imgtext:`${tslength}/5`,
+										}
+									]
+								  that.imglist.push(...enday);	
+								};
+								that.imglist.splice(0,1);
+								console.log(that.imglist);
 			 					}
 			 				 })
-			 				 }else{
+			 				 
+							 /*else{
 			 				  uni.previewImage({
 			 				              urls:that.imglist,
 			 								   })
-			 				 }
+			 				 }*/
 			 },
 			 scvideo(){
 				    var that=this;
@@ -276,10 +309,11 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				   				 }
 					.input-bottom{
 					    width:100%;
-						margin-top:20upx;	
+						flex-wrap:wrap; 	
 					  .input-imgout,.input-videoout{
-						  width:22%;
-						  height:160upx; 
+						  width:21%;
+						  height:160upx;
+						  margin-top:20upx; 
 						 position:relative;
 						 margin-right:4%;
 						.delete{

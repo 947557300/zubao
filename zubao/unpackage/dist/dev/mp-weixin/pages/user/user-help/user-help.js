@@ -120,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var TopTar = function TopTar() {return __webpack_require__.e(/*! import() | pages/login/components/toptar */ "pages/login/components/toptar").then(__webpack_require__.bind(null, /*! ../../login/components/toptar.vue */ 75));};var UserHelp = function UserHelp() {return __webpack_require__.e(/*! import() | pages/user/user-help/components/help-list */ "pages/user/user-help/components/help-list").then(__webpack_require__.bind(null, /*! ./components/help-list.vue */ 103));};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var TopTar = function TopTar() {return __webpack_require__.e(/*! import() | pages/login/components/toptar */ "pages/login/components/toptar").then(__webpack_require__.bind(null, /*! ../../login/components/toptar.vue */ 75));};var UserHelp = function UserHelp() {return __webpack_require__.e(/*! import() | pages/user/user-help/components/help-list */ "pages/user/user-help/components/help-list").then(__webpack_require__.bind(null, /*! ./components/help-list.vue */ 106));};var _default =
 
 
 

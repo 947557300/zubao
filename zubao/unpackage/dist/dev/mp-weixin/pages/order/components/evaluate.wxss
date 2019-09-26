@@ -103,11 +103,14 @@
 }
 .content .eval-input .input-bottom.data-v-3db15809 {
       width: 100%;
-      margin-top: 20rpx;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
 }
 .content .eval-input .input-bottom .input-imgout.data-v-3db15809, .content .eval-input .input-bottom .input-videoout.data-v-3db15809 {
-        width: 22%;
+        width: 21%;
         height: 160rpx;
+        margin-top: 20rpx;
         position: relative;
         margin-right: 4%;
 }
