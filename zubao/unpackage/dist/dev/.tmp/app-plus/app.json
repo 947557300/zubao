@@ -1,8 +1,12 @@
 {
   "pages": [
-    "pages/login/index",
-    "pages/user/user-help/user-help",
+    "pages/order/order-evaluate",
+    "pages/user/user-set/user-set",
+    "pages/user/user-set/check-number",
     "pages/login/login",
+    "pages/user/user-help/user-help",
+    "pages/user/user-authentication/user-authentication",
+    "pages/login/index",
     "pages/login/phone-check",
     "pages/user/user-help/help-content"
   ],
@@ -19,6 +23,6 @@
     "autoclose": false
   },
   "appname": "zubao",
-  "compilerVersion": "2.2.2",
+  "compilerVersion": "2.3.2",
   "usingComponents": {}
 }

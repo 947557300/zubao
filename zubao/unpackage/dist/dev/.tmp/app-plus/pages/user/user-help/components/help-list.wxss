@@ -46,6 +46,7 @@
     font-size: 32rpx;
     color: #3d3d3d;
     padding: 28rpx 0;
+    background: red;
 }
 .helplist .list image.data-v-5db1ebce {
       width: 70rpx;

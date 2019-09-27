@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/order/order-evaluate",
+    "pages/login/index",
     "pages/user/user-set/user-set",
     "pages/user/user-set/check-number",
     "pages/login/login",
     "pages/user/user-help/user-help",
     "pages/user/user-authentication/user-authentication",
-    "pages/login/index",
     "pages/login/phone-check",
     "pages/user/user-help/help-content"
   ],
@@ -17,6 +17,5 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap31.json"
+  "usingComponents": {}
 }

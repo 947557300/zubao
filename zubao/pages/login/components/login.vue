@@ -106,7 +106,7 @@
 			        provider: 'weixin',
 			        success: function (infoRes) {
                       that._data.nickNames = infoRes.userInfo.nickName;  	 		 
-					  that._data.avatarUrl=infoRes.userInfo.avatarUrl;
+					  that._data.avatarUrl= require(infoRes.userInfo.avatarUrl);
 			        }
 			      });
 			    }

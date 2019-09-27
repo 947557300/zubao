@@ -3,7 +3,7 @@
 		<view class="productout">
 		<view class="product">
 			<view class="product-con flex">
-				<image src="../../../static/login/part5_picture2.png"></image>
+				<image :src="imgs.img1"></image>
 				<view class="title-cont">
 					<view class="title">自行车是的是的是的是的是的是的是的是的ssssssssssssssssssssssssssssssss</view>
 					<view class="ffifle glaytext">sdsdsdsds</view>
@@ -21,11 +21,11 @@
 	 <textarea value=""  class="textare" placeholder="宝贝满足你的期待吗?" maxlength="500" placeholder-style="color:#b9b9b9" />
 	 <view class="input-bottom flex">
 		 
-	  <view class="input-imgout" v-for="(item,index) of imglist" :key="index" @tap="scimg()">
-		 <image src="../../../static/order/order-evaluate/false.png" class="delete" v-if="item.imgtrue" @tap.stop="deleimg(index)"></image> 
+	  <view class="input-imgout" v-for="(item,index) of imglist" :key="index" @tap="scimg($event)" :data-id="index">
+		 <image :src="imgs.img2" class="delete" v-if="item.imgtrue" @tap.stop="deleimg(index)"></image> 
 		<view class="input-img" >
 			<view v-if="!item.imgtrue" class="imgfalse">
-			 <image src="../../../static/order/order-evaluate/img.png"></image>
+			 <image :src="imgs.img3"></image>
 			  <view>{{item.imgtext}}</view>
 			 </view>
 			  <view v-if="item.imgtrue" class="imgtrue">
@@ -33,42 +33,39 @@
 			  </view>
 		</view>  
 	  </view>
-	  
-	  
-	  
-	  
-	  
-	  
+	  <view class="input-imgout"  @tap="scimgs()" v-if="tslength<5&&tslength!=0">
+	  		<view class="input-img" >
+	  			<view  class="imgfalse">
+	  			 <image :src="imgs.img3"></image>
+	  			  <view>{{tslength}}/5</view>
+	  			 </view>
+	  		</view>  
+	  </view>
 	  <view class="input-videoout">
-		   <image src="../../../static/order/order-evaluate/false.png" class="delete" v-if="srctrue"></image> 
+		   <image :src="imgs.img2" class="delete" v-if="srctrue"></image> 
 		<view class="input-video" @tap="scvideo()">
 		   <view v-if="!srctrue" class="srcfalse">
-			<image src="../../../static/order/order-evaluate/video.png" >
+			<image :src="imgs.img4" >
 			<view>添加视频</view>
 			</view>
 			<view v-if="srctrue">
 			 <video :src="src" class="srctrue"></video>	
 			</view>
 		</view>
-			
 		</view>    
 	  </view>	   
 	 </view> 
 	</view>
-	
-	
 	<view class="nmout">
 	 <view class="flex nm">	  
 	   <view class="flex" @tap="nmchange()">
-		   <image src="../../../static/login/cirle.png" v-if="!ok"></image>
-		   <image src="../../../static/login/ok.png" v-if="ok"></image>
+		   <image :src="imgs.img5" v-if="!ok"></image>
+		   <image :src="imgs.img6" v-if="ok"></image>
 		    <text class="imgright">匿名</text> 
 	   </view>
-		  
 		 <view class="glaytext">{{nmtitle}}</view>
 	 </view>
 	 </view>
-	 
 	 <view class="otherpjout">
 	  <view class="otherpj">	 
 	   <view>店铺评价</view>
@@ -88,9 +85,7 @@
 		    <view class="fabu">发布</view>		
 	  </view>
 	 </view>
-	
 </template>
-
 <script>
 import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"	
 	 export default{
@@ -99,6 +94,14 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 		 },
 		 data(){
 			 return{
+				 imgs:{
+					 img1:require("../../../static/login/part5_picture2.png"),
+					 img2:require("../../../static/order/order-evaluate/false.png"),
+					 img3:require("../../../static/order/order-evaluate/img.png"),
+					 img4:require("../../../static/order/order-evaluate/video.png"),
+					 img5:require("../../../static/login/cirle.png"),
+					 img6:require("../../../static/login/ok.png") 
+				 },
 				 color:'#f2f2f2',
 				 activeColor:"#eb828f",
 				 size:"30",
@@ -118,7 +121,8 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 					 imgtext:"添加照片"	  
 					}
 				],
-				tslength:"",
+				imglists:"",
+				tslength:0,
 				ok:true,
 				nmtitle:"你写的评价会以匿名的形式展现",
 				src:"",
@@ -127,6 +131,9 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				change1:"",
 				change2:"",
 			 }
+		 },
+		 watch:{
+			 
 		 },
 		 methods:{
 			 chang($event){
@@ -161,10 +168,13 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				   return title;
 			 },
 			deleimg(index){
-				this.imgtrue=false;
+				
 				this.imglist.splice(index,1);
 				var length=this.imglist.length;
+				this.tslength=length;
+				console.log(length);
 				if(length==0){
+				this.imglist.splice(0,1);
 					var starobj={
 					 path:'',
 					 imgtrue:false,
@@ -174,39 +184,49 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				}
 				
 			 },
-			 scimg(){
+			 scimgs(){
+				 var that=this;
+				 console.log(that.tslength);
+				 uni.chooseImage({
+				 	count:5-that.tslength,
+					sizeType:"compressed",
+					success:function(res){
+					 var ts=res.tempFiles;
+					  	for(var i=0; i<ts.length;i++){
+					  		ts[i].imgtrue=true;
+					  	}
+					  that.imglist.push(...ts);	
+					  that.tslength=that.imglist.length;
+					},
+					
+				 })
+			 },
+			 scimg($event){       
 			 				 var that=this;
+						   if(that.tslength!=0){
+							   var i=$event.currentTarget.dataset.id;
+							   var url=that.imglist[i].path;
+							   var urlarry=[];
+							   urlarry.push(url);
+							        uni.previewImage({
+										urls:urlarry,
+									})
+						   }else{
 			 				 uni.chooseImage({
 			 				 	count:5,
 			 					sizeType:"compressed",
 			 					success:function(res){
-			 				    that.imgtrue=true;		
+			 				    /*that.imgtrue=true;*/		
 							    var ts=res.tempFiles;
-								var tslength=res.tempFiles.length;
-									
+								that.tslength=res.tempFiles.length;	
 								for(var i=0; i<ts.length;i++){
 									ts[i].imgtrue=true;
 								}	
 								that.imglist.push(...ts);
-								if(tslength<5){
-									var enday=[
-										{path:"",
-										imgtrue:false,
-										imgtext:`${tslength}/5`,
-										}
-									]
-								  that.imglist.push(...enday);	
-								};
 								that.imglist.splice(0,1);
-								console.log(that.imglist);
 			 					}
 			 				 })
-			 				 
-							 /*else{
-			 				  uni.previewImage({
-			 				              urls:that.imglist,
-			 								   })
-			 				 }*/
+							 }
 			 },
 			 scvideo(){
 				    var that=this;
@@ -218,9 +238,6 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				                               that.src = res.tempFilePath;
 				                           }
 				                       });
-				      
-				        
-				    
 			 },
 			 nmchange(){
 				 this.ok=!this.ok;
