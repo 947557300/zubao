@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/order/order-evaluate",
+    "pages/order/subscription-order/subscription-order-confirm",
     "pages/login/index",
+    "pages/order/order-evaluate/order-evaluate",
     "pages/user/user-set/user-set",
     "pages/user/user-set/check-number",
     "pages/login/login",

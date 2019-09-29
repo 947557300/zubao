@@ -733,7 +733,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1497,6 +1497,91 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
+/***/ 100:
+/*!****************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/git/zubao/pages/login/components sync ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	var e = new Error("Cannot find module '" + req + "'");
+	e.code = 'MODULE_NOT_FOUND';
+	throw e;
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 100;
+
+/***/ }),
+
+/***/ 108:
+/*!********************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/git/zubao/static/login/part5_picture2.png ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/img/part5_picture2.2a99dc26.png";
+
+/***/ }),
+
+/***/ 109:
+/*!**************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/git/zubao/static/order/order-evaluate/false.png ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACj0lEQVRYR8VX3ZHTMBDelfJOqACogEsF3L1mxh5fBYQKLlQAVwFJB9cBPjmTV3IVYCogJSTvlpdZj+RxnEiWfHDoxS/Wft/+fbtCiDhJkmQA8AEArhBxyl9zvSSiAwCUALAriuIx1CwO/Zhl2VRr/Q0RGZxBQ86BiHIp5ec8z5mY83gJpGn6FQDuIoD7QAy+UkrduxhcJMBe13X9oxPiEK99/5RCiJtL0TgjMJ/PryaTCYOHhjuU3L6qqtvtdst10p4TAsbz3/8A3ALuhRCzbiROCCRJUiLi+1CXRv5XKqVm9m5LwBTcl5FGY6/dK6W4wKEh8AKhP+sOIcQ7TkVDIE3TBwD46HFjLYRYaa3zoRQR0S8iWgohFkM2lVJLS4D79ZWLQF3XN5vNZmdEaeciweBSymv2zHTTT49TB6XUa2R5RcTvA0ls+9hFogseqiNEdIsB4bfcnCTGgBuja44Ah5QHTMg5I8GXbNhDPbdARPTEBGJ7/4QEG+Ocx4LzvYZAmqYU4nrvnxNtHwPeCtEYAt2cWx3RWju7w+dgdAr6BddNQSwJWwPBReiodrCjdkgn+pGwNbAyS4e3FAZabVAnHMabNhwUosA+jybBChskxVVVzXiRCKj2lkSAFB+VUlNLwJsGIuJhxYOIR6jdhF0pK6uq+iSlvENEHkius26HkfFs7xtII7TCd+UohHjbjmMzktm7/7OQWKojZDk6MNx6RVFct0rYtWD6mGfDm2jLARf6CspXLq7lUkouuL9KgsG11gvvWm6dMJFgEqFjekjEnqSUWdDDpGvJbMrLZ3TH0TzNmg340gl6nNZ1zSRiiDTAvMg+63HaZ2zUbUFEjRghYvMloua5hYgsQg/9PPvy8wdzBMrtXY3lCAAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ 110:
+/*!************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/git/zubao/static/order/order-evaluate/img.png ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACM0lEQVRYR+2W0XEaMRCGd4G71+AKjCuAdOB04FRgXEHgAd3wZPuJkXgAV2C7griD0IFxBbYryOUZjj+zNzrPBYOQDs+QzOQeb6TdT79W/y7TgT8+cH76+wG01mfMfEtEzUC1UgAXSZI8uPY5FRiNRq16vf4M4ImInIE2JBHwdpZlJ8Ph8GUbhBNAa33FzJdRFB31+/00RIHJZNJcLBY/AVwnSXK1E0A2LJfLb6vVqsPMudwAWszcIqJZSPLS2lMAL8ycKwAgrdVq80ajcVMcKFfA0j7LPYvczBx0Wl84AE25FiJKoyg6EYgcoJCaiD4rpea+AausM8Z0iOixuJocwBiTS6yUOvUNagv0WNZnWfbqKrT1mOV8wQDj8Vju9ZKI1mFnzHw9GAx21ktlAK11j5knRPQKYCoFJaezhdsjomMA/SRJpi4lKwFYQ/oO4D6O496mZ6m1vmPmcwBfXQZUFSBl5vmuOrHB20qpo20qBAOUTu88mX1R4oCi1Na1VQByR1RKeTUvYwxcDvjvAvj0BJ8eEKzAunu5npiPqwYDlNxSfPzLNru2oD+I6Mn1WioBiPWK8TCzFNi7QaMYXACwGJPLmisBWBU6AMRs2mttNm/btpN2dzW0ygDF3RtjukR0JvOC/LP9/kEpdefTzPYG8EkS1At8KnffpCX13s8DpQL7tMf45cso7fxXUahv1mohuszsPZT4ZiyvAzCL43j6x0xYJdBH7fFqLh+VbFOc/wAHV+A3pfq0MDNF0ooAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ 111:
+/*!**************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/git/zubao/static/order/order-evaluate/video.png ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABv0lEQVRYR+2WzXEaQRCFX1MMV6MIDBnIEYgMJEcgFIG8B2aKk+FEzXAARSAUgVEEggwcAiHIZ9h5rpZZ1RZ/okCYy/Zta6f7ffNmdrsFZw45sz4KgMKBNwe89x0AtyJSO+ZSkpyJyNBa+7BvHVFxEfkJ4IHkpFQqve6bnF8XY6wCuBGRW5KJc264qU4IoambBTAzxiQSQpgBGFtrfxwivJrjvR8BuHLO1bN3g8Ggulgs7mOMzaXLU5KXIjJRAJLsOuf0GI4O77268MtaK5kwSd1cleRTjLHTbrdnmfNrACGECYAv1tpvh9D0+/0GyRcR6WwSzmruAhgrrbW2cQwAyT8AhpVKZZgkydq92gpwiGg+J3PAGHOxSfhDBz4LQO/Arlond6AAKBw4uwNpmtb1j7ftSzj5V7AUHqVp2t0E8j8A7gBof/kKYA3kZADLdvuY3YHl8zuIiDy1Wq1JHuBT23EIYUyy5py7zJ//CshvADWSzzqQjETkWicZAFOlyxJ7vV6tXC7r8LBXxBi1x9+Q/O6c06a2FgpCsiEir8aYzlvPns/nuvhqdS7IGste6v8WTbUN5zfxUW4xFRcOFA78BbfIpcmm+qUaAAAAAElFTkSuQmCC"
+
+/***/ }),
+
+/***/ 112:
+/*!***********************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/git/zubao/static/login/cirle.png ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVRoge2ZMUgcQRSGr7jCIoWFhSFCQiIiVhZXWFhYKKQwlQYsLCwsg4idYBG0S3MQiQmksLCwEGwsRNyd73FbBEktIVwhYqHdFRYpLC7FTsL5nD3d3VkvhPvhNcvu///z5s3s7NtSqYsuuujivwEwAMyHYfge+Aoc2Phsr80DA532eQtAP7AGREDzgRHZZ/o7ZjwIghERWQfqKYzrqIvIehAEI49qHpgDGjmM62gAs49lfuMeMzfAN1v72zYO7LWbe57dKNJ4GdhrIw7xIu1rw9Fn76ENzx5QLmIA1QTBOjCdgW+a5PVT9WpeRJYSpv9LGIavsvJGUfRSRD65ylBElryYBwYTzHvLEvGWqvl/AYO5yY0xW5rcGPMR6PHgvVXng0NnKxcpMOrI/vciFhnxJnGsSwkYzUO645jaikffWm/YkbCdrGRl7r6stj17duluK81Gphk3xszo7AdBMFWA51sIgmDKsRZmUhMBm4roogC/SdoXSnszC8lhbpKMcCTvMDWJiJyoaVwtwGuS9mqrtoicZCE5V1lYLMCrE8CiGsB5FhK9nS34t5qovaDfB6lJRORUlZCfs8nDtJfUDJxmIQlVFoo7qyugvjlEJMxCsqsGcFyA1yRtfaTYTU1ijFlRJFdRFA0V4PcWoigaAq5U+a6kJiJukTRVFL4T6R3IRrZWjIgcKaJaGIbPPXv+i1qt9pQYrfV/lJkQWHZkY82jZ633zqG3nIdwAKipjJyLyFuPvkulUqkUhuEbY8xPx4w/y0XM3ZdKE7jMXJdujX7gzKGz4IO8jLtteAYMe+AfBn44+MHXl5/NkD7iNoFrcnTUgFnLoXkv8N03Jf4+don9ydZECq4J+4yL65o838H3CI/Z+ncJN4kbVVXgNVABXtio2GtV2jeDL4GxQsy3DGJcRPbbmMga+8B4oeZbBvHE/rDw0aFuWC6vfaaHDqTXlkXS2mgX1/bZ3kc37hhIDzBJ/FupXY3X7T2THcl4GhC/xSs2OvcrqYsuuvi38RtBeltdOntIeAAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ 113:
+/*!********************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/git/zubao/static/login/ok.png ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEB0lEQVRoge1ZPYhbRxDeQmBDDhuCL3GRwo2DIUkVQ1K6TRFwcaXtCPvABGxzLkIMaZbTzlg+vZ31yYgjOQfbhRs3JpUDChypQjDE5RUqrjD4nXZWF8KF2PEVSvFWundPdye9H51x0Adq9LTffDOamZ3dJ8QEE0wwwf8CVjam2qDPMZhlRlphoBYDbfrPavSdWW6DPmdlY+pN6+2jjcFZh9RkoJcM1B3x89IhNdsYnH1jwrlSO+MjnRT3zIG555AqVtEVq+iKQ6o4MPcY6NnA75FWuFI7c2DCu1KWHNKdhJAWKz0X3jQnhq0Pb5oTrPScT7GYI8Z0pSyNVTyj/tAquhsz/JSBrrfh9vtpuUKsT1ulr1mg33p8Dun+OtQ+Hod2YWVjyu001iyiGCNe8zgWlNXCi/wvonc5Hnmla5u1pfeK4t+oVo9a0MoCvWKgrgXzYF3WCuMX8Zx3QEuFEQ/aqcRrohBSi2bGAb3uRWazVmBkEujI+hEG+t4H6rVFM5ObtN8qkcKD2ICsbEz1OxTSSi6yNugLseK6XpDGoWDUl7ebhTmfmcjvsF0Gao2jR7Oi06z03JqUhwee+U3PITUzkdvK4klGCr0D3+RWm+RHM8NAW1Ft6XLyuUP9ddTxKLSVxZOpDXTAXPR5+Mrh7c+KEN1DXDwjhZ1b9Q8G7M/TR6yo45vHxdRGGMxyb7YpRLWHBV12QGs97v0Guu0UNsupDTHSEx+hu7kUx5BGvBBCMBB5DU9SG4sVEez2fE3KwxZ0mRWdHkl8Im0cBqeGrgH9beYsYBUVsFP62j6Cugy0NWzDySLeO1D2o0uY2QG7lwNy4XisS+3pRFbxQgjhkL7qrUvvwJAUEkIIC+YLBvrdzy7PLdKlnc/T5fwgf54U8kVsQf+43+8cBqd2+yfyRL6vwRexBf1zegdStNGkE4zG5BUf8eZoo/2NDPS/o2xkrOhLq/QfyfNx1oN7p5pzI7ML6UeJxD/xPGvkI66co0REYh55kmaI9elR1nSlLK0r/Xme4W+9VnuHwfzkp9FHWXmEi43Te7XTcaCDdKlntw36Qi6ygz7QdKUsFXagEWLnkZIV/bBRrR4tQOeuaF2tH3JIi4UeKYUQwqG51U8l0KoQ0l1gQX8Xv/kojHgT69MO6b4n/4dBz3dk/UhR/K2r9UNe/J/exsO/FxrHi+IXQvQP26vb1yvmcRE10ZWy5O9N+xdbL2RwrAjNA9io0icWzINtY/pXRn05iyNRqwxmHdAvMfEPeT74dBza+4giRkuJHfcpQzA7SuReyOAYQzDLiZtqh3Rn7Je7cexxvb7lkJqMxlhFNyzosgVdtopuMBrjZ5utHWsO+no9ibf2BUcSb+0rpgkmmGCCXPgPBybGJY2UXg4AAAAASUVORK5CYII="
+
+/***/ }),
+
 /***/ 14:
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -1601,72 +1686,6 @@ function normalizeComponent (
   }
 }
 
-
-/***/ }),
-
-/***/ 144:
-/*!********************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/git/zubao/static/login/part5_picture2.png ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/part5_picture2.2a99dc26.png";
-
-/***/ }),
-
-/***/ 145:
-/*!**************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/git/zubao/static/order/order-evaluate/false.png ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACj0lEQVRYR8VX3ZHTMBDelfJOqACogEsF3L1mxh5fBYQKLlQAVwFJB9cBPjmTV3IVYCogJSTvlpdZj+RxnEiWfHDoxS/Wft/+fbtCiDhJkmQA8AEArhBxyl9zvSSiAwCUALAriuIx1CwO/Zhl2VRr/Q0RGZxBQ86BiHIp5ec8z5mY83gJpGn6FQDuIoD7QAy+UkrduxhcJMBe13X9oxPiEK99/5RCiJtL0TgjMJ/PryaTCYOHhjuU3L6qqtvtdst10p4TAsbz3/8A3ALuhRCzbiROCCRJUiLi+1CXRv5XKqVm9m5LwBTcl5FGY6/dK6W4wKEh8AKhP+sOIcQ7TkVDIE3TBwD46HFjLYRYaa3zoRQR0S8iWgohFkM2lVJLS4D79ZWLQF3XN5vNZmdEaeciweBSymv2zHTTT49TB6XUa2R5RcTvA0ls+9hFogseqiNEdIsB4bfcnCTGgBuja44Ah5QHTMg5I8GXbNhDPbdARPTEBGJ7/4QEG+Ocx4LzvYZAmqYU4nrvnxNtHwPeCtEYAt2cWx3RWju7w+dgdAr6BddNQSwJWwPBReiodrCjdkgn+pGwNbAyS4e3FAZabVAnHMabNhwUosA+jybBChskxVVVzXiRCKj2lkSAFB+VUlNLwJsGIuJhxYOIR6jdhF0pK6uq+iSlvENEHkius26HkfFs7xtII7TCd+UohHjbjmMzktm7/7OQWKojZDk6MNx6RVFct0rYtWD6mGfDm2jLARf6CspXLq7lUkouuL9KgsG11gvvWm6dMJFgEqFjekjEnqSUWdDDpGvJbMrLZ3TH0TzNmg340gl6nNZ1zSRiiDTAvMg+63HaZ2zUbUFEjRghYvMloua5hYgsQg/9PPvy8wdzBMrtXY3lCAAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 146:
-/*!************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/git/zubao/static/order/order-evaluate/img.png ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACM0lEQVRYR+2W0XEaMRCGd4G71+AKjCuAdOB04FRgXEHgAd3wZPuJkXgAV2C7griD0IFxBbYryOUZjj+zNzrPBYOQDs+QzOQeb6TdT79W/y7TgT8+cH76+wG01mfMfEtEzUC1UgAXSZI8uPY5FRiNRq16vf4M4ImInIE2JBHwdpZlJ8Ph8GUbhBNAa33FzJdRFB31+/00RIHJZNJcLBY/AVwnSXK1E0A2LJfLb6vVqsPMudwAWszcIqJZSPLS2lMAL8ycKwAgrdVq80ajcVMcKFfA0j7LPYvczBx0Wl84AE25FiJKoyg6EYgcoJCaiD4rpea+AausM8Z0iOixuJocwBiTS6yUOvUNagv0WNZnWfbqKrT1mOV8wQDj8Vju9ZKI1mFnzHw9GAx21ktlAK11j5knRPQKYCoFJaezhdsjomMA/SRJpi4lKwFYQ/oO4D6O496mZ6m1vmPmcwBfXQZUFSBl5vmuOrHB20qpo20qBAOUTu88mX1R4oCi1Na1VQByR1RKeTUvYwxcDvjvAvj0BJ8eEKzAunu5npiPqwYDlNxSfPzLNru2oD+I6Mn1WioBiPWK8TCzFNi7QaMYXACwGJPLmisBWBU6AMRs2mttNm/btpN2dzW0ygDF3RtjukR0JvOC/LP9/kEpdefTzPYG8EkS1At8KnffpCX13s8DpQL7tMf45cso7fxXUahv1mohuszsPZT4ZiyvAzCL43j6x0xYJdBH7fFqLh+VbFOc/wAHV+A3pfq0MDNF0ooAAAAASUVORK5CYII="
-
-/***/ }),
-
-/***/ 147:
-/*!**************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/git/zubao/static/order/order-evaluate/video.png ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABv0lEQVRYR+2WzXEaQRCFX1MMV6MIDBnIEYgMJEcgFIG8B2aKk+FEzXAARSAUgVEEggwcAiHIZ9h5rpZZ1RZ/okCYy/Zta6f7ffNmdrsFZw45sz4KgMKBNwe89x0AtyJSO+ZSkpyJyNBa+7BvHVFxEfkJ4IHkpFQqve6bnF8XY6wCuBGRW5KJc264qU4IoambBTAzxiQSQpgBGFtrfxwivJrjvR8BuHLO1bN3g8Ggulgs7mOMzaXLU5KXIjJRAJLsOuf0GI4O77268MtaK5kwSd1cleRTjLHTbrdnmfNrACGECYAv1tpvh9D0+/0GyRcR6WwSzmruAhgrrbW2cQwAyT8AhpVKZZgkydq92gpwiGg+J3PAGHOxSfhDBz4LQO/Arlond6AAKBw4uwNpmtb1j7ftSzj5V7AUHqVp2t0E8j8A7gBof/kKYA3kZADLdvuY3YHl8zuIiDy1Wq1JHuBT23EIYUyy5py7zJ//CshvADWSzzqQjETkWicZAFOlyxJ7vV6tXC7r8LBXxBi1x9+Q/O6c06a2FgpCsiEir8aYzlvPns/nuvhqdS7IGste6v8WTbUN5zfxUW4xFRcOFA78BbfIpcmm+qUaAAAAAElFTkSuQmCC"
-
-/***/ }),
-
-/***/ 148:
-/*!***********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/git/zubao/static/login/cirle.png ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVRoge2ZMUgcQRSGr7jCIoWFhSFCQiIiVhZXWFhYKKQwlQYsLCwsg4idYBG0S3MQiQmksLCwEGwsRNyd73FbBEktIVwhYqHdFRYpLC7FTsL5nD3d3VkvhPvhNcvu///z5s3s7NtSqYsuuujivwEwAMyHYfge+Aoc2Phsr80DA532eQtAP7AGREDzgRHZZ/o7ZjwIghERWQfqKYzrqIvIehAEI49qHpgDGjmM62gAs49lfuMeMzfAN1v72zYO7LWbe57dKNJ4GdhrIw7xIu1rw9Fn76ENzx5QLmIA1QTBOjCdgW+a5PVT9WpeRJYSpv9LGIavsvJGUfRSRD65ylBElryYBwYTzHvLEvGWqvl/AYO5yY0xW5rcGPMR6PHgvVXng0NnKxcpMOrI/vciFhnxJnGsSwkYzUO645jaikffWm/YkbCdrGRl7r6stj17duluK81Gphk3xszo7AdBMFWA51sIgmDKsRZmUhMBm4roogC/SdoXSnszC8lhbpKMcCTvMDWJiJyoaVwtwGuS9mqrtoicZCE5V1lYLMCrE8CiGsB5FhK9nS34t5qovaDfB6lJRORUlZCfs8nDtJfUDJxmIQlVFoo7qyugvjlEJMxCsqsGcFyA1yRtfaTYTU1ijFlRJFdRFA0V4PcWoigaAq5U+a6kJiJukTRVFL4T6R3IRrZWjIgcKaJaGIbPPXv+i1qt9pQYrfV/lJkQWHZkY82jZ633zqG3nIdwAKipjJyLyFuPvkulUqkUhuEbY8xPx4w/y0XM3ZdKE7jMXJdujX7gzKGz4IO8jLtteAYMe+AfBn44+MHXl5/NkD7iNoFrcnTUgFnLoXkv8N03Jf4+don9ydZECq4J+4yL65o838H3CI/Z+ncJN4kbVVXgNVABXtio2GtV2jeDL4GxQsy3DGJcRPbbmMga+8B4oeZbBvHE/rDw0aFuWC6vfaaHDqTXlkXS2mgX1/bZ3kc37hhIDzBJ/FupXY3X7T2THcl4GhC/xSs2OvcrqYsuuvi38RtBeltdOntIeAAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 149:
-/*!********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/git/zubao/static/login/ok.png ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEB0lEQVRoge1ZPYhbRxDeQmBDDhuCL3GRwo2DIUkVQ1K6TRFwcaXtCPvABGxzLkIMaZbTzlg+vZ31yYgjOQfbhRs3JpUDChypQjDE5RUqrjD4nXZWF8KF2PEVSvFWundPdye9H51x0Adq9LTffDOamZ3dJ8QEE0wwwf8CVjam2qDPMZhlRlphoBYDbfrPavSdWW6DPmdlY+pN6+2jjcFZh9RkoJcM1B3x89IhNdsYnH1jwrlSO+MjnRT3zIG555AqVtEVq+iKQ6o4MPcY6NnA75FWuFI7c2DCu1KWHNKdhJAWKz0X3jQnhq0Pb5oTrPScT7GYI8Z0pSyNVTyj/tAquhsz/JSBrrfh9vtpuUKsT1ulr1mg33p8Dun+OtQ+Hod2YWVjyu001iyiGCNe8zgWlNXCi/wvonc5Hnmla5u1pfeK4t+oVo9a0MoCvWKgrgXzYF3WCuMX8Zx3QEuFEQ/aqcRrohBSi2bGAb3uRWazVmBkEujI+hEG+t4H6rVFM5ObtN8qkcKD2ICsbEz1OxTSSi6yNugLseK6XpDGoWDUl7ebhTmfmcjvsF0Gao2jR7Oi06z03JqUhwee+U3PITUzkdvK4klGCr0D3+RWm+RHM8NAW1Ft6XLyuUP9ddTxKLSVxZOpDXTAXPR5+Mrh7c+KEN1DXDwjhZ1b9Q8G7M/TR6yo45vHxdRGGMxyb7YpRLWHBV12QGs97v0Guu0UNsupDTHSEx+hu7kUx5BGvBBCMBB5DU9SG4sVEez2fE3KwxZ0mRWdHkl8Im0cBqeGrgH9beYsYBUVsFP62j6Cugy0NWzDySLeO1D2o0uY2QG7lwNy4XisS+3pRFbxQgjhkL7qrUvvwJAUEkIIC+YLBvrdzy7PLdKlnc/T5fwgf54U8kVsQf+43+8cBqd2+yfyRL6vwRexBf1zegdStNGkE4zG5BUf8eZoo/2NDPS/o2xkrOhLq/QfyfNx1oN7p5pzI7ML6UeJxD/xPGvkI66co0REYh55kmaI9elR1nSlLK0r/Xme4W+9VnuHwfzkp9FHWXmEi43Te7XTcaCDdKlntw36Qi6ygz7QdKUsFXagEWLnkZIV/bBRrR4tQOeuaF2tH3JIi4UeKYUQwqG51U8l0KoQ0l1gQX8Xv/kojHgT69MO6b4n/4dBz3dk/UhR/K2r9UNe/J/exsO/FxrHi+IXQvQP26vb1yvmcRE10ZWy5O9N+xdbL2RwrAjNA9io0icWzINtY/pXRn05iyNRqwxmHdAvMfEPeT74dBza+4giRkuJHfcpQzA7SuReyOAYQzDLiZtqh3Rn7Je7cexxvb7lkJqMxlhFNyzosgVdtopuMBrjZ5utHWsO+no9ibf2BUcSb+0rpgkmmGCCXPgPBybGJY2UXg4AAAAASUVORK5CYII="
 
 /***/ }),
 
@@ -7152,7 +7171,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7173,14 +7192,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7256,7 +7275,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8579,7 +8598,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/index": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom", "usingComponents": { "lo-gin": "/pages/login/components/login", "top-tar": "/pages/login/components/toptar" } }, "pages/order/order-evaluate": { "navigationBarTitleText": "评论", "navigationStyle": "custom", "usingComponents": { "top-tar": "/pages/login/components/toptar", "eval-uate": "/pages/order/components/evaluate" } }, "pages/user/user-set/user-set": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom", "usingComponents": { "top-tar": "/pages/login/components/toptar", "set-con": "/pages/user/user-set/components/set-content" } }, "pages/user/user-set/check-number": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom", "usingComponents": { "top-tar": "/pages/login/components/toptar", "phone-title": "/components/phone-title/phone-title" } }, "pages/login/login": { "navigationBarTitleText": "uni-app", "usingComponents": {} }, "pages/user/user-help/user-help": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom", "usingComponents": { "top-tar": "/pages/login/components/toptar", "user-help": "/pages/user/user-help/components/help-list" } }, "pages/user/user-authentication/user-authentication": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom", "usingComponents": { "top-tar": "/pages/login/components/toptar" } }, "pages/login/phone-check": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom", "usingComponents": { "lo-gin": "/pages/login/components/login", "top-tar": "/pages/login/components/toptar" } }, "pages/user/user-help/help-content": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom", "usingComponents": { "top-tar": "/pages/login/components/toptar" } } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/order/subscription-order/subscription-order-confirm": { "navigationBarTitleText": "确认订单", "navigationStyle": "custom" }, "pages/login/index": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom" }, "pages/order/order-evaluate/order-evaluate": { "navigationBarTitleText": "评论", "navigationStyle": "custom" }, "pages/user/user-set/user-set": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom" }, "pages/user/user-set/check-number": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom" }, "pages/login/login": { "navigationBarTitleText": "uni-app" }, "pages/user/user-help/user-help": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom" }, "pages/user/user-authentication/user-authentication": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom" }, "pages/login/phone-check": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom" }, "pages/user/user-help/help-content": { "navigationBarTitleText": "uni-app", "navigationStyle": "custom" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 
@@ -8592,25 +8611,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "" };exports.default = _default;
-
-/***/ }),
-
-/***/ 80:
-/*!****************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/git/zubao/pages/login/components sync ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 80;
 
 /***/ })
 

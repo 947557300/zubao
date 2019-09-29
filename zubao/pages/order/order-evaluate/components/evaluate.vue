@@ -42,14 +42,14 @@
 	  		</view>  
 	  </view>
 	  <view class="input-videoout">
-		   <image :src="imgs.img2" class="delete" v-if="srctrue"></image> 
+		   <image :src="imgs.img2" class="delete" v-if="srctrue" @tap="delevideo"></image> 
 		<view class="input-video" @tap="scvideo()">
 		   <view v-if="!srctrue" class="srcfalse">
 			<image :src="imgs.img4" >
 			<view>添加视频</view>
 			</view>
 			<view v-if="srctrue">
-			 <video :src="src" class="srctrue"></video>	
+			 <video :src="src" class="srctrue" autoplay="false"></video>	
 			</view>
 		</view>
 		</view>    
@@ -87,7 +87,7 @@
 	 </view>
 </template>
 <script>
-import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"	
+import RaTe from "../../../../components/uni-ui/uni-rate/uni-rate.vue"	
 	 export default{
 		 components:{
 			RaTe 
@@ -95,12 +95,12 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 		 data(){
 			 return{
 				 imgs:{
-					 img1:require("../../../static/login/part5_picture2.png"),
-					 img2:require("../../../static/order/order-evaluate/false.png"),
-					 img3:require("../../../static/order/order-evaluate/img.png"),
-					 img4:require("../../../static/order/order-evaluate/video.png"),
-					 img5:require("../../../static/login/cirle.png"),
-					 img6:require("../../../static/login/ok.png") 
+					 img1:require("../../../../static/login/part5_picture2.png"),
+					 img2:require("../../../../static/order/order-evaluate/false.png"),
+					 img3:require("../../../../static/order/order-evaluate/img.png"),
+					 img4:require("../../../../static/order/order-evaluate/video.png"),
+					 img5:require("../../../../static/login/cirle.png"),
+					 img6:require("../../../../static/login/ok.png") 
 				 },
 				 color:'#f2f2f2',
 				 activeColor:"#eb828f",
@@ -172,7 +172,6 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 				this.imglist.splice(index,1);
 				var length=this.imglist.length;
 				this.tslength=length;
-				console.log(length);
 				if(length==0){
 				this.imglist.splice(0,1);
 					var starobj={
@@ -182,8 +181,12 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 					};
 				 this.imglist.push(starobj);	
 				}
-				
-			 },
+				},
+			delevideo(){
+				this.src="";
+				this.srctrue=false;
+			},	
+			 
 			 scimgs(){
 				 var that=this;
 				 console.log(that.tslength);
@@ -230,14 +233,16 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 			 },
 			 scvideo(){
 				    var that=this;
+					 if(!that.srctrue){
 				           uni.chooseVideo({
 				                           count: 1,
 				                           sourceType: ['camera', 'album'],
 				                           success: function (res) {
 											   that.srctrue=true;
-				                               that.src = res.tempFilePath;
+				                               that.src = res.tempFilePath; 
 				                           }
 				                       });
+									   }
 			 },
 			 nmchange(){
 				 this.ok=!this.ok;
@@ -262,6 +267,10 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 		    background:#f2f2f2;
 		    color:#3e3e3e;
 			position:relative;
+			.srctrue{
+			  width:100% !important;
+			  height:160upx !important;	  
+			}
 			.flex{
 			  display:flex;
 			  align-items:center;	  
@@ -361,6 +370,7 @@ import RaTe from "../../../components/uni-ui/uni-rate/uni-rate.vue"
 							   width:100%;
 							   height:160upx;
 							   }
+							   
 						   }	
 					   }	  
 					  }	

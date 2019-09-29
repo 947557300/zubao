@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TopTar from "../login/components/toptar.vue"
+import TopTar from "../../login/components/toptar.vue"
 import EvalUate from "./components/evaluate"	
 	export default {
 		components:{

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "确认订单",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "top-tar": "/pages/login/components/toptar",
+    "order-confirm": "/pages/order/subscription-order/components/order-confirm"
+  }
+}

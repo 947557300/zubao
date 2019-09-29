@@ -3,6 +3,6 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "top-tar": "/pages/login/components/toptar",
-    "eval-uate": "/pages/order/components/evaluate"
+    "eval-uate": "/pages/order/order-evaluate/components/evaluate"
   }
 }
