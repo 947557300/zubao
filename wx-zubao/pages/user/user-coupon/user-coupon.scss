@@ -1,0 +1,75 @@
+	.flexView{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.noData{
+		flex-direction: column;
+		font-size: 30upx;
+		color: #999999;
+		button{
+			margin-top: 20upx;
+			background-color: rgb(253,81,0);
+			color: #FFFFFF;
+			border-radius: 15px;
+		}
+	}
+	ul{
+		padding-top: 25upx;
+		margin: 0 25upx 0 25upx;
+		width:700upx;
+		li{
+			font-size: 26upx;
+			width: 700upx;
+			height: 150upx;
+			margin: 0upx 10upx 20upx 10upx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.left{
+				border-radius: 15upx;
+				flex: 1;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				background-color: rgba(240,81,0,0.2);
+				.img{
+					margin-left: 10upx;
+					height: 150upx;
+					border-radius: 15upx;
+					overflow:hidden;
+					image{
+						width: 130upx;
+						height: 130upx;
+					}			
+				}
+				.text_box{		
+					margin-left: 10upx;
+					height: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					flex-direction:column;
+					border-bottom-right-radius: 15upx;
+					border-top-right-radius: 15upx;
+				}
+			}	
+			.right{
+				border-radius: 15upx;
+				width: 200upx;
+				height: 150upx;
+				background-color: rgba(240,81,0,0.2);
+				.box{
+					margin-top: 15upx;
+					border-left:1upx dashed rgb(253,81,0);
+					width: 200upx;
+					height: 120upx;
+					.btn{
+						background-color: rgb(253,81,0);
+						color: #FFFFFF;
+						border-radius: 15px;
+					}
+				}			
+			}
+		}
+	}

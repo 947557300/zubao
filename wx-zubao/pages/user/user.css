@@ -1,0 +1,136 @@
+page{
+   /* height: 100%; */
+   background-color: #F8F8F8;
+}
+
+view,text{
+  font-size: 14px;	
+}
+*{
+	box-sizing: border-box;
+}
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}	
+.all{
+	display: flex;
+	flex-direction:column;
+}
+.user{
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 160upx;
+}
+.user image{
+	flex: none;
+	margin: 10upx 10upx 10upx 40upx;
+	width: 140upx;
+	height: 140upx;
+}
+.user view{
+	flex: 1;
+	font-weight: 500;
+	margin: 5upx 10upx 10upx 0upx;
+}
+.set{	
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.set image{
+	margin-right: 40upx;
+}
+.assets{
+	flex:none;
+	border-top-left-radius: 50upx;
+	border-top-right-radius: 50upx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 670upx;
+	height: 140upx;
+	background-color: #000000;
+	margin:  40upx 0upx 0upx 40upx;
+}
+.assets text{
+	color: #F0AD4E;
+}
+.assets view{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #AAAAAA;
+	flex:1;
+	flex-direction: column;
+}
+.order{
+	flex: 1;
+	flex-direction: column;
+	width: 750upx;
+	padding-bottom: 50upx;
+}
+.rent,.purchase{
+	border-radius: 30upx;
+	width: 670upx;
+	margin-top: 20upx;
+	background-color: #FFFFFF;
+}
+.message{
+	font-size: 14px;
+	margin: 20upx 20upx 35upx 20upx;
+	display: flex;
+	justify-content: space-between;
+}
+.process{
+	padding-bottom: 30upx;
+}
+.process image{	
+	width: 100%;
+}
+.process_item{
+	flex: 1;
+	font-size: 14px;
+	flex-direction: column;
+}
+.process_item image{
+	width: 60upx;
+	height: 60upx;
+}
+.list{	
+	margin-top: 20upx;
+	padding: 20upx;
+	border-radius: 30upx;
+	background-color: #FFFFFF;
+}
+.listItem{
+	font-size: 16px;
+	color: #555555;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 610upx;	
+	height: 50upx;
+	margin: 15upx 10upx 15upx 10upx;
+}
+.listItem image{
+	width: 30upx;
+	height: 30upx;	
+}
+.process_item_item{
+	position: relative;
+}
+.badge{
+	position: absolute;
+	right: -10upx;top: -10upx;
+	margin: 0; 
+}
+.hover{
+	border-radius: 3%;
+	background-color: #CCCCCC;
+}
+.listhover{
+	border-radius: 10upx;
+	background-color: #CCCCCC;
+}

@@ -1,0 +1,233 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "租包",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/rent-goods/rent-goods",
+			"style": {
+				"navigationBarTitleText": "出租",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/subscription-goods/subscription-goods",
+			"style": {
+				"navigationBarTitleText": "买包",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/phone-check",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+        {
+		    "path": "pages/user/user-authentication/user-authentication",
+		    "style": {
+			    "navigationBarTitleText": "uni-app",
+			     "navigationStyle":"custom"
+		}
+	    },
+		{
+			"path": "pages/user/user-wallet/user-wallet",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/user/user-coupon/user-coupon",
+			"style": {}
+		}, {
+			"path": "pages/user/user-wish/user-wish",
+			"style": {
+				"navigationBarTitleText": "心愿单"
+			}
+		}, {
+			"path": "pages/user/user-show/user-show",
+			"style": {
+				"navigationBarTitleText": "我的晒单"
+			}
+		}, {
+			"path": "pages/user/user-address/user-address",
+			"style": {
+				"navigationBarTitleText": "我的收货地址"
+			}
+		}, {
+			"path": "pages/user/user-help/user-help",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/user-help/help-content",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/user-set/user-set",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/user-set/check-number",
+			"style": {
+				"navigationBarTitleText": "更换号码",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/customer/customer",
+			"style": {
+				"navigationBarTitleText": "在线客服"
+			}
+		}
+	    ,{
+            "path" : "pages/user/user-address/add-address/add-address",
+            "style" : {
+				"navigationBarTitleText": "添加收获地址"
+			}
+        }
+        ,{
+            "path" : "pages/user/user-address/edit-address/edit-address",
+            "style" : {}
+        },
+		{
+			"path" : "pages/user/user-order/user-order",
+			"style" : {}
+		}
+        ,{
+            "path" : "pages/rent-goods/rent-goods-message/rent-goods-message",
+            "style" : {
+				"navigationBarTitleText": "租包商品详情"
+			}
+        }
+        ,{
+		    "path" : "pages/order/order-evaluate/order-evaluate",
+		    "style" : {
+				"navigationBarTitleText": "评论",
+				 "navigationStyle":"custom"
+			}
+		},
+		{
+            "path" : "pages/user/user-order/order-details/order-details",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/user-subscription-orders/user-subscription-orders",
+            "style" : {}
+        }
+        ,
+		{
+			"path": "pages/order/subscription-order/subscription-order-confirm/subscription-order-confirm",
+			"style": {
+				"navigationBarTitleText": "确认订单",
+				 "navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/order/subscription-order/subscription-order-confirm/lease",
+			"style": {
+				"navigationBarTitleText": "出租条例",
+				 "navigationStyle":"custom"
+			}
+		},
+		{
+            "path" : "pages/order/rent-order/rent-order-confirm/rent-order-confirm",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/order/rent-order/rent-order-payment/rent-order-payment",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/order/rent-order/rent-order-message/rent-order-message",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/subscription-goods/subscription-goods-message/subscription-goods-message",
+            "style" : {
+				"navigationBarTitleText": "认购商品详情"
+			}
+        }
+        ,{
+            "path" : "pages/order/subscription-order/subscription-order-message/subscription-order-message",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/order/delivery-status/delivery-status",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/rent-goods/rent-goods-comment/rent-goods-comment",
+            "style" : {
+				"navigationBarTitleText": "商品评价"
+			}
+        }
+        ,{
+            "path" : "pages/order/rent-order/rent-return-order/rent-return-order",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/goods-show/goods-show",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/goods-show/goods-show-message/goods-show-message",
+            "style" : {
+				"navigationBarTitleText": "晒单详情页"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#949494",
+		"selectedColor": "#252525",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/images/tabBar/index.png",
+			"selectedIconPath": "static/images/tabBar/indexActive.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/rent-goods/rent-goods",
+			"iconPath": "static/images/tabBar/rent.png",
+			"selectedIconPath": "static/images/tabBar/rentActive.png",
+			"text": "租包"
+		}, {
+			"pagePath": "pages/subscription-goods/subscription-goods",
+			"iconPath": "static/images/tabBar/sell.png",
+			"selectedIconPath": "static/images/tabBar/sellActive.png",
+			"text": "认购"
+		}, {
+			"pagePath": "pages/user/user",
+			"iconPath": "static/images/tabBar/my.png",
+			"selectedIconPath": "static/images/tabBar/myActive.png",
+			"text": "我的"
+		}]
+	}
+}

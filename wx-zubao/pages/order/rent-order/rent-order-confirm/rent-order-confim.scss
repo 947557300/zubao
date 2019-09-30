@@ -1,0 +1,200 @@
+page{
+	background-color: #F8F8F8;
+}
+.list{
+	width: 710upx;
+	height: 100upx;
+	margin-left: 20upx;
+}
+.flex{   //居中
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex-column{  //纵向左对齐
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.flex-row{   //横向左对齐
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+}
+.flex-row-between{   //横向两端对齐
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.address{
+	margin-top: 25upx;
+	background-color:#FFFFFF;
+	padding: 20upx 0 20upx 0;
+	
+	.message{	
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+			.user{
+				width: 750upx;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 30upx;
+				color: #555555;
+					image{
+						width: 30upx;
+						height: 30upx;
+						margin: 0 20upx 0 20upx;
+					}
+			}
+			.user-address{
+				margin-top: 40upx;
+				margin-left: 70upx;
+				font-size: 25upx;
+				color: #777777;
+			}
+	}
+}
+
+.goods{
+	margin-top: 25upx;
+	background-color: #FFFFFF;
+	text{
+		font-size: 25upx;
+	}
+		.title{
+			font-size: 30upx;
+			width: 710upx;
+			height: 60upx;
+			margin: 20upx 20upx 0upx 20upx;
+			border-bottom: 2upx solid #DDDDDD;
+		}
+		.weight{
+			color: #DDDDDD;
+			width: 710upx;
+			margin: 20upx 20upx 20upx 20upx;
+		}
+		.goods-message{
+			margin-left: 20upx;
+			width: 710upx;
+			background-color:#F8F8F8;
+			image{
+				width: 150upx;
+				height: 150upx;
+				margin: 10upx 10upx 10upx 10upx;
+			}
+			height: 170upx;		
+			.goods-text{
+				height: 170upx;
+				justify-content: center;
+			}
+		}
+		.day{
+			border-bottom: 3upx solid #DDDDDD;	
+				.btn{
+					margin: 0 15upx 0 15upx;
+					width: 80upx;
+					height: 40upx;
+					line-height: 40upx;
+					text-align: center;
+					font-size: 25upx;
+					border-radius: 25upx;
+					color: #ea986c;
+					border: 3upx solid #ea986c;
+				}
+				.btnBg{
+					background-color: #ea986c;
+					color: #FFFFFF;
+				}
+		}
+		.price{
+			border-bottom: 3upx solid #DDDDDD;
+				.number{
+					color: #999999 ;
+				}
+		}
+		.deposit{
+			width: 710upx;
+			height: 100upx;
+			margin-left: 20upx;
+			.text{
+				text{
+					margin-right: 20upx;					
+				}
+			}
+		}
+}
+
+.money{
+	margin-top: 25upx;
+	background-color: #FFFFFF;
+	font-size: 25upx;
+}
+.insurance{
+	margin-top: 25upx;
+	background-color: #FFFFFF;
+	font-size: 25upx;
+	text{
+		margin: 10upx 0 10upx 0;
+	}	
+		.textdecoration{
+			text-decoration:line-through;
+		}
+		.text{
+			
+		}
+		.switchView{
+			display: flex;
+			align-items: flex-end;
+			flex-direction: row;
+		}
+}
+.bottom{
+	margin-top: 25upx;
+	background-color: #FFFFFF;
+	font-size: 25upx;
+	margin-bottom:180upx;
+		.coupon{
+			border-bottom: 3upx solid #DDDDDD;
+		}
+}
+.remarks{
+	background-color: #FFFFFF;
+	height: 80upx;
+	font-size: 25upx;
+	align-items: center;
+	justify-content: flex-start;
+	display:flex;
+	.remarkstext{
+		height: 100%;
+		margin: 20upx 0 20upx 0;
+	}
+	.inputText{
+		height: 80%;
+		flex: 1;
+		margin-left: 10upx;
+	}
+}
+.pay{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 99;
+	border-top:1upx solid #ECECEC;
+	background-color:#FFFFFF;
+	  text{
+		  margin: 30upx;
+		  color:#ea986c ;
+		  background-color:#FFFFFF;
+	  }
+	  button{	
+		  border-radius: 0;
+		  background-color: #ea986c;
+		  font-size: 25upx;
+		  color: #FFFFFF;
+		  margin: 30upx; 
+		  padding: 20upx 100upx 20upx 100upx;
+	  }
+}

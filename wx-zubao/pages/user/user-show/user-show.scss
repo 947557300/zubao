@@ -1,0 +1,161 @@
+page {
+		background-color: #DDDDDD;
+	}
+
+	.bg {
+		position: relative;
+		opacity: 0.3;
+	}
+
+	.index {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		margin: 0 10rpx;
+	.row {
+		flex-direction: row;
+	}
+
+	.left,
+	.right {
+		position: relative;
+		background-color: rbga(111, 0, 0, 0);
+		display: inline-block;
+		vertical-align: top;
+		/* 		display: flex;
+		flex-direction: column; */
+		width: 48%;
+			.itemlist {
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				width: 100%;
+				background-color: #007AFF;
+				border-radius: 20upx;
+				background-color: #fff;
+				display: inline-block;
+				margin: 10upx 0 0 0;				
+					.card {
+						margin-bottom: 20rpx;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+						width: 100%;
+							.card-img {
+								width: 100%;
+							}
+							.car-title-view {
+								width: 100%;
+								display: flex;
+								justify-content: center;
+								align-items: flex-start;
+								flex-direction: column;
+									
+									.card-title {
+										margin: 10upx 20upx 10upx 20upx;
+										font-size: 28upx;
+										color: #777777;
+									}
+									
+									.box{
+										display:flex;
+										justify-content: space-between;
+										width: 100%;
+										box-sizing: border-box;
+										padding: 20upx;
+										align-items:center;
+										.card-time {
+											font-size: 20upx;
+											color: #CCCCCC;
+										}
+										.dianzang{
+											display: flex;
+											align-items:center;
+											image{
+												width: 35upx;
+												width: 35upx;
+												margin-right: 5upx;
+											}
+											text{
+												font-size: 20upx;
+												color: #CCCCCC;
+											}
+										}
+									}
+							}
+					}
+			}
+			
+	}
+
+	.left {
+		margin-right: 10upx;
+	}
+
+	.right {
+		margin-left: 10upx;
+	}
+
+
+
+	/* 提示窗口 */
+	.uni-tip {
+		padding: 15px;
+		width: 300px;
+		background: #fff;
+		box-sizing: border-box;
+		border-radius: 10px;
+		
+			.uni-tip-title {
+				text-align: center;
+				font-weight: bold;
+				font-size: 16px;
+				color: #333;
+			}
+			
+			.uni-tip-content {
+				padding: 15px;
+				font-size: 14px;
+				color: #666;
+			}
+			
+			.uni-tip-group-button {
+				margin-top: 10px;
+				display: flex;
+					.uni-tip-button {
+						width: 100%;
+						text-align: center;
+						font-size: 14px;
+						color: #3b4144;
+					}
+			}					
+	}
+	.text_box{
+		padding: 60upx;
+		.text{
+			text-align:center;
+			text{
+				display: block;
+				font-size: 30upx;
+				color: #999999;
+				margin-bottom: 30upx;
+			}
+		}
+		button{
+			width: 200upx;
+			height: 80upx;
+			line-height: 80upx;
+			text-align: center;
+			margin: 0 auto;
+			background:none;
+			box-sizing: border-box;
+			color:#ea986c;
+			font-size: 28upx;
+		}
+		button:after{
+			border:4upx solid #ea986c;
+			border-radius: 80upx;
+		}
+	}
+}
