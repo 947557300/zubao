@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "出租条例",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "top-tar": "/pages/login/components/toptar"
+  }
+}

@@ -3,6 +3,6 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "top-tar": "/pages/login/components/toptar",
-    "order-confirm": "/pages/order/subscription-order/components/order-confirm"
+    "order-confirm": "/pages/order/subscription-order/subscription-order-confirm/components/order-confirm"
   }
 }

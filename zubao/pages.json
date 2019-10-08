@@ -1,12 +1,20 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 	{
-		"path": "pages/order/subscription-order/subscription-order-confirm",
+		"path": "pages/order/subscription-order/subscription-order-confirm/subscription-order-confirm",
 		"style": {
 			"navigationBarTitleText": "确认订单",
 			 "navigationStyle":"custom"
 		}
 	},
+	{
+		"path": "pages/order/subscription-order/subscription-order-confirm/lease",
+		"style": {
+			"navigationBarTitleText": "出租条例",
+			 "navigationStyle":"custom"
+		}
+	},
+	
 	{
 		"path": "pages/login/index",
 		"style": {

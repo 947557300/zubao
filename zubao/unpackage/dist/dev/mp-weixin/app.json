@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/order/subscription-order/subscription-order-confirm",
+    "pages/order/subscription-order/subscription-order-confirm/subscription-order-confirm",
+    "pages/order/subscription-order/subscription-order-confirm/lease",
     "pages/login/index",
     "pages/order/order-evaluate/order-evaluate",
     "pages/user/user-set/user-set",
@@ -18,5 +19,6 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap56.json"
 }

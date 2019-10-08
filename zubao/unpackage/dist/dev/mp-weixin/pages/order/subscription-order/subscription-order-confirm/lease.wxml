@@ -1,0 +1,1 @@
+<view><top-tar vue-id="1" backtext="出租条例" bind:__l="__l"></top-tar><view>出租条例</view></view>

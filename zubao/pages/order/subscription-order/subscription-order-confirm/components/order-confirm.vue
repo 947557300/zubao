@@ -17,7 +17,7 @@
 			</view>
 			<view class="product flex">
 			 <view class="product-left">
-				<image src="../../../../static/order/subscription-order/1.jpg"></image> 
+				<image :src="imglist.img1"></image> 
 			 </view>
 			  <view class="product-right">
 				<view class="black">chloe</view>
@@ -28,22 +28,26 @@
 			  <view class="choose">
 			  				   <view class="choose-first flex">
 			  					  <view class="">使用债权分抵扣</view>
-			  					 <image src="../../../../static/login/cirle.png" v-if="!choosef" @tap="choosefir()"></image>
-			  					 <image src="../../../../static/login/ok.png" v-if="choosef" @tap="choosefir()"></image>
+			  					 <image :src="imglist.img2" v-if="!choosef" @tap="choosefir()"></image>
+			  					 <image :src="imglist.img3" v-if="choosef" @tap="choosefir()"></image>
 			  				   </view>
 			  </view>
 			  <view class="choose">
 			  				   <view class="choose-first flex">
-			  					  <view class="">是否出租  <image src="../../../../static/order/subscription-order/questions.png" class="questions"></image></view>
-			  					 <image src="../../../../static/login/cirle.png" v-if="!chooses" @tap="choosesen()"></image>
-			  					 <image src="../../../../static/login/ok.png" v-if="chooses" @tap="choosesen()"></image>
+			  					  <view class="flex">
+									  <view>是否出租</view>
+									<view class="lease flex" @tap="golease()"><image :src="imglist.img4" class="questions"></image><text>出租业务条例</text></view>  
+									</view>
+			  					 <image :src="imglist.img2" v-if="!chooses" @tap="choosesen()"></image>
+			  					 <image :src="imglist.img3" v-if="chooses" @tap="choosesen()"></image>
 			  				   </view>
 			  </view>
 		  </view>
 		</view>
+		<view class="views"></view>
 		<view class="order-button">
 		 <view class="order-div flex">	
-		 <view>总计:11111元</view>
+		 <view>总计：11111元</view>
 	     <view class="button">立即支付</view>
 		</view>
 		</view>
@@ -54,7 +58,6 @@
 	export default{
 		data(){
 			return{
-				address:true,
 				choosef:true,
 				chooses:false,
 				message:{
@@ -63,7 +66,10 @@
 					address:"刚搜的是肯定就看了时间都是看了多久了开始决定了速度进来我是来看的历史看到了看来是的是的是的是的是的看"
 				},
 				imglist:{
-					img1:"../../../../static/order/subscription-order/address.png"
+					img1:require("../../../../../static/order/subscription-order/1.jpg"),
+					img2:require("../../../../../static/login/cirle.png"),
+					img3:require("../../../../../static/login/ok.png"),
+					img4:require("../../../../../static/order/subscription-order/questions.png")
 				}
 			}
 		},
@@ -73,6 +79,11 @@
 			},
 			choosesen(){
 			 this.chooses=!this.chooses;	
+			},
+			golease(){
+		    uni.navigateTo({
+		    	url:"./lease"
+		    })		
 			}
 		}
 	}
@@ -87,6 +98,7 @@
 					   content:'';
 					   display:table;
 		}
+		
 		.flex{
 			display:flex;
 			align-items: center;;
@@ -152,13 +164,16 @@
 		  .choose-first{
 			 justify-content:space-between;
 			 border-top:4upx solid #f5f5f5;
-			 padding:24upx 0; 
+			 padding:24upx 0;
+			 .lease{
+				color:#b8b8b8;
+				font-size:20upx; 
+			 } 
 			 .questions{
-				width:30upx;
-				 height:30upx;
+				width:24upx;
+				 height:24upx;
 				 position:relative;
-				 left:7upx;
-				 top:9upx; 
+				 right:-10upx;
 			 }
 			 image{
 				width:50upx;
@@ -170,16 +185,16 @@
 		
 		.order-button{
 	     position:fixed;
-		 background:#f5f5f5;
+		 background:#fff;
+		  border-top:2upx solid #f5f5f5;
 		 left:0;
 		 bottom:0;		  
 		  width:100%;
-		  
 			  .order-div{
-			   width:92%;
+			   width:88%;
 			   margin:0 auto;
 			  color:#ed8291;
-			  font-size:44upx;
+			  font-size:40upx;
 		      justify-content: space-between;
 			  padding:28upx 0; 
 			  .button{

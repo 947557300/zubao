@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TopTar from "../../login/components/toptar.vue"
+import TopTar from "../../../login/components/toptar.vue"
 import OrderConfirm from "./components/order-confirm"
    export default{
 	   components:{

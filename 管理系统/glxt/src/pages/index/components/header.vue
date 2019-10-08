@@ -1,65 +1,91 @@
 <template>
-     <div class="contentdiv">
-      <div class="header-content">
-       <div class="header-top"> 
-           <div class="row no-gutters align-items-center">
-             <div class="col-2">
-               <img src="../../../../static/index/logo.jpg" alt="" class="logo img-thumbnail">
-             </div>
-             <div class="col-1">
-                 首页
-             </div>
-              <div class="col-1">
-                 首页
-             </div>
-              <div class="col-1">
-                 首页
-             </div>
-              <div class="col-1">
-                 首页
-             </div>
-             <div class="col-1 offset-5">
-                 <div class="greendiv">申请试用</div>
-             </div>
+   
+     <nav class="navbar navbar-default navbar-fixed-top navbar-myself">
+                <div class="cont">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="../../../../static/logo.jpg" alt="">
+                    </a>
+                  </div>
+              
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">会员联盟</a></li>
+                        <li><a href="#">连锁版</a></li>
+                    </ul>
+                
+                   <!-- <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">申请试用</a></li>
+                    </ul>-->
+                    <div class="nav navbar-nav navbar-right navbar-myright  hidden-sm hidden-xs"><span>申请试用</span></div>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
             
-           </div>
-           </div>   
-      </div>
-     </div>
-    
 </template>
 
 <script>
 export default {
-    
+    data()
+    {return{}}
 }
 </script>
 
 <style scoped>
-  .contentdiv{
-      width:100%;
-      background:#f9f9f9;
-      font-size:15px;
-      color:#404040;
+ .cont{
+   width:85%;
+  margin:0 auto;
+  font-size:1.5rem;
   }
-  .header-content{
+ .navbar-myself{
      width:99%;
      background:#fff;
-     box-shadow: 2px 2px 6px #ccc; 
-  }
-  .header-top{
-     width:80%;
-     margin:0 auto;
-  }
-  .logo{
-     width:226.6px;
-     height:60px; 
-  }
-  .greendiv{
-    color:#fff;
-    background:#00c3d5;
-    padding:10px 15px;
-    text-align:center;
-  }
 
+ }
+ .nav > li{
+  margin-right:8rem;
+ }
+ .navbar-default{
+  box-shadow:2px 6px 5px #e3e3e3;
+   border-color:#fff;
+ }
+ .navbar-myself .navbar-brand{
+    height:7rem;
+ }
+ .navbar-myself .navbar-brand img{ 
+     width:18rem;
+    height:5rem;
+    }
+ #bs-example-navbar-collapse-1 li a{
+   height:7rem;
+   line-height:5rem;
+   color:#000;
+ }
+ .navbar-right li a{
+   background:#00c3d5;
+   color:#fff;
+   height:2rem !important;
+ }
+ .navbar-myright{
+   height:7rem;
+   line-height:8rem;
+ }
+ .navbar-myright span{
+   background:#00c3d5;
+   padding:0.6rem 1rem;
+   color:#fff;
+ }
+ .navbar-toggle{
+   margin-top:2rem;
+ } 
 </style>
