@@ -18,7 +18,7 @@ export default {
         HeadEr,
         BigImg,
         QuanYi,
-        ZhengChe,
+        ZhengChe
        },
       data(){
         return{
@@ -30,9 +30,4 @@ export default {
 </script>
 
 <style>
- html{
-   font-size:10px;
-   background:#f9f9f9;
- }
-
 </style>

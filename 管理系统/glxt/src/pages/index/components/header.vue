@@ -1,6 +1,6 @@
 <template>
    
-     <nav class="navbar navbar-default navbar-fixed-top navbar-myself">
+     <nav class="navbar navbar-default navbar-myself">
                 <div class="cont">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
@@ -23,10 +23,6 @@
                         <li><a href="#">会员联盟</a></li>
                         <li><a href="#">连锁版</a></li>
                     </ul>
-                
-                   <!-- <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#">申请试用</a></li>
-                    </ul>-->
                     <div class="nav navbar-nav navbar-right navbar-myright  hidden-sm hidden-xs"><span>申请试用</span></div>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -47,6 +43,9 @@ export default {
   margin:0 auto;
   font-size:1.5rem;
   }
+  .navbar{
+    margin-bottom:0;
+  }
  .navbar-myself{
      width:99%;
      background:#fff;
@@ -56,7 +55,7 @@ export default {
   margin-right:8rem;
  }
  .navbar-default{
-  box-shadow:2px 6px 5px #e3e3e3;
+  box-shadow:2px 3px 5px #e3e3e3;
    border-color:#fff;
  }
  .navbar-myself .navbar-brand{

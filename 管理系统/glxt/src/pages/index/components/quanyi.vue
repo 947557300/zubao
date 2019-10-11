@@ -71,6 +71,9 @@ export default {
     text-align:center;
     margin:2rem 0 3rem 0;
 }
+table{
+  font-size:1.5rem;
+}
 table th,table td{
      text-align:center;
 }
